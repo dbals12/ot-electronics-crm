@@ -102,10 +102,12 @@ Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision 
 |---|---|
 | 가상 IoT · 조기경보 | `IoT_Reading__e` Platform Event → `T5_IoT_Reading_Subscribe` → WOLI 기록 → `Trend_Flag__c` 추세 판정 → `T5_Sync_Asset_Trend_Summary`. `OtTrendAlertCardController` + 게이지 위젯 |
 | 고객 포털 (Experience Cloud) | `T5HmiAssetHomeController` / `T5HmiAssetDetailController` + `otEquip*` / `otMyAssets` / `otAssetPortal` — 고객이 자기 장비 상태·이력·게이지 확인 후 상담 진입 |
-| 통합 Service Agent (Agentforce) | 고객·내부 상담을 **하나의 에이전트 + Topic 분리**로 처리. `T5Agent*Action` 6종 (자산 컨텍스트 / Case 인테이크 / 계약 컨텍스트 / Knowledge 검색 / 답변 추천 / Case 종결 요약) |
-| 상담사 콘솔 (MIAW) | `OtMs*Controller` + `otMs*` LWC — MessagingSession 좌측 고정 + Case 서브탭 자동 오픈, 1차 Agent → 2차 상담사 **같은 대화 이어받기**(새 세션 아님) |
+| 통합 Service Agent (Agentforce) | `bots/OT_Service_Agent` + `aiAuthoringBundles` — 고객·내부 상담을 **하나의 에이전트 + Topic 분리**로 처리. `T5Agent*Action` 6종(자산 컨텍스트 / Case 인테이크 / 계약 컨텍스트 / Knowledge 검색 / 답변 추천 / Case 종결 요약) + `genAiPromptTemplates` 2종 |
+| AI 자동 응답 추천 | `T5AgentReplySuggestionAction` + `Agent_Reply_Suggestion` 프롬프트 템플릿 + `otAgentSuggestedReply` / `t5ServiceReplies` — 상담사가 답변 초안을 한 번 더 검증해 발송 |
+| MIAW 실시간 채팅 | `messagingChannels/OT_Service_Chat` + `EmbeddedServiceConfig` + `Route_Inbound_to_Agent` / `Route_to_Messaging_Queue` Flow + `Messaging_Session_Pinned/Record_Page` FlexiPage + `otMsSidebarLeft`·`otMsSidebarCenter`·`otMsConvBanner`·`otCaseSubtabOpener` — MessagingSession 좌측 고정 + Case 서브탭 자동 오픈, 1차 Agent → 2차 상담사 **같은 대화 이어받기** |
 | Slack 협업 · FSM | 담당자 확정 → Slack Swarm 채널 자동 생성·초대·요약, FSM 모바일 배정 연동 + SA/WO 상태 동기화 |
-| 운영 홈 · 영업 홈 | `OTOpsHomeController` / `OtSalesDashboardController` + `otCooling*` / `otSales*` / `coolinxOverview` |
+| 운영 홈 | `OTOpsHomeController` + `otCooling*` / `coolinxOverview` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC — 데이터센터 3D 디지털 트윈·KPI·유량 추세 |
+| 영업(Opportunity) 홈 | `OtSalesDashboardController` / `OtSalesSidebarController` + `dashboards/OT_Sales_Dashboard` + `reports/OT_Sales/` 4종(Pipeline_By_Stage·Key_Deals·Quarterly) + `otSales*` LWC 15종 — 분기 실적·파이프라인·서비스계약 만료 관리 |
 
 ## 4. 핵심 의사결정
 
