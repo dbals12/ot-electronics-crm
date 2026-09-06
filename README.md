@@ -152,7 +152,15 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 
 ## 8. 화면
 
-`screenshots/` 참고. (데모 영상 링크 예정)
+| 운영 개요 대시보드 | 데이터센터 3D 디지털 트윈 |
+|---|---|
+| ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![3D 열지도](./screenshots/03_데이터센터_3D_열지도.png) |
+
+| 장비 상세 (게이지·이력) | 고객 포털 "내 자산" |
+|---|---|
+| ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) | ![고객 포털](./screenshots/05_고객포털_내자산.png) |
+
+전체: [`screenshots/`](./screenshots) · 상담사 콘솔(MIAW)·Agent 상담·RCA 워크벤치는 데모 영상 예정.
 
 ## 9. 이 저장소에 대해
 
