@@ -1,0 +1,968 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1635.5250000000003" height="3330" viewBox="0 0 1635.5250000000003 3330" class="lt-erd" style="touch-action: none;"><title>Schematex ERD</title>
+<desc>Entity-Relationship Diagram with 29 entities and 48 relationships.</desc>
+<style>.lt-erd { font-family: system-ui, -apple-system, sans-serif; }
+.lt-erd-title { font: bold 16px sans-serif; fill: #0f172a; }
+.lt-erd-entity-bg { fill: #ffffff; stroke: #334155; stroke-width: 1.5; }
+.lt-erd-entity-header-bg { fill: #ffffff; stroke: #334155; stroke-width: 1.5; }
+.lt-erd-entity-header { font: 600 13px sans-serif; fill: #0f172a; text-anchor: middle; dominant-baseline: middle; }
+.lt-erd-attr-name { font: 500 12px sans-serif; fill: #0f172a; dominant-baseline: middle; }
+.lt-erd-attr-name-pk { font: 600 12px sans-serif; fill: #0f172a; text-decoration: underline; dominant-baseline: middle; }
+.lt-erd-attr-type { font: 11px monospace; fill: #475569; dominant-baseline: middle; }
+.lt-erd-attr-marker { font: 700 10px sans-serif; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; letter-spacing: 0.3px; }
+.lt-erd-attr-marker-bg-pk { fill: #2563eb; stroke: none; }
+.lt-erd-attr-marker-bg-fk { fill: #d97706; stroke: none; }
+.lt-erd-attr-marker-bg-uk { fill: #059669; stroke: none; }
+.lt-erd-attr-marker-bg-nn { fill: #94a3b8; stroke: none; }
+.lt-erd-row-divider { stroke: #f1f5f9; stroke-width: 1; }
+.lt-erd-edge { fill: none; stroke: #334155; stroke-width: 1.5; }
+.lt-erd-edge-non-identifying { stroke-dasharray: 5,4; }
+.lt-erd-glyph { stroke: #334155; stroke-width: 1.5; fill: none; }
+.lt-erd-glyph-circle { stroke: #334155; stroke-width: 1.5; fill: #ffffff; }
+.lt-erd-edge-label-bg { fill: #ffffff; stroke: #f1f5f9; stroke-width: 1; }
+.lt-erd-edge-label { font: 500 10px sans-serif; fill: #475569; text-anchor: middle; dominant-baseline: middle; }</style>
+
+<g class="lt-erd-edges" transform="translate(0, 0)"><g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CAMPAIGN" data-sx-live-end="LEAD" data-sx-live-mode="orthogonal"><path d="M 122 141 L 122 191 L 161.20000000000002 191 L 161.20000000000002 241" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="116" y1="159" x2="128" y2="159" class="lt-erd-glyph"/>
+<circle cx="161.20000000000002" cy="223" r="4" class="lt-erd-glyph-circle"/><line x1="161.20000000000002" y1="231" x2="161.20000000000002" y2="241" class="lt-erd-glyph"/><line x1="161.20000000000002" y1="231" x2="167.20000000000002" y2="241" class="lt-erd-glyph"/><line x1="161.20000000000002" y1="231" x2="155.20000000000002" y2="241" class="lt-erd-glyph"/>
+<rect x="107.60000000000002" y="176" width="68" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="141.60000000000002" y="185" class="lt-erd-edge-label">generates</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ACCOUNT" data-sx-live-end="CONTACT" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 658 L 161.20000000000002 735.5 L 161.20000000000002 735.5 L 161.20000000000002 813" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="155.20000000000002" y1="676" x2="167.20000000000002" y2="676" class="lt-erd-glyph"/>
+<circle cx="161.20000000000002" cy="795" r="4" class="lt-erd-glyph-circle"/><line x1="161.20000000000002" y1="803" x2="161.20000000000002" y2="813" class="lt-erd-glyph"/><line x1="161.20000000000002" y1="803" x2="167.20000000000002" y2="813" class="lt-erd-glyph"/><line x1="161.20000000000002" y1="803" x2="155.20000000000002" y2="813" class="lt-erd-glyph"/>
+<rect x="145.20000000000002" y="720.5" width="32" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="161.20000000000002" y="729.5" class="lt-erd-edge-label">has</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ACCOUNT" data-sx-live-end="ASSET" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 658 L 161.20000000000002 1137 L 743.2500000000001 1137 L 743.2500000000001 1616" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="155.20000000000002" y1="676" x2="167.20000000000002" y2="676" class="lt-erd-glyph"/>
+<circle cx="743.2500000000001" cy="1598" r="4" class="lt-erd-glyph-circle"/><line x1="743.2500000000001" y1="1606" x2="743.2500000000001" y2="1616" class="lt-erd-glyph"/><line x1="743.2500000000001" y1="1606" x2="749.2500000000001" y2="1616" class="lt-erd-glyph"/><line x1="743.2500000000001" y1="1606" x2="737.2500000000001" y2="1616" class="lt-erd-glyph"/>
+<rect x="397.2250000000001" y="1122" width="110" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="452.2250000000001" y="1131" class="lt-erd-edge-label">owns_or_operates</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ACCOUNT" data-sx-live-end="ENTITLEMENT" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 658 L 161.20000000000002 1329.5 L 724.0250000000001 1329.5 L 724.0250000000001 2001" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="155.20000000000002" y1="676" x2="167.20000000000002" y2="676" class="lt-erd-glyph"/>
+<circle cx="724.0250000000001" cy="1983" r="4" class="lt-erd-glyph-circle"/><line x1="724.0250000000001" y1="1991" x2="724.0250000000001" y2="2001" class="lt-erd-glyph"/><line x1="724.0250000000001" y1="1991" x2="730.0250000000001" y2="2001" class="lt-erd-glyph"/><line x1="724.0250000000001" y1="1991" x2="718.0250000000001" y2="2001" class="lt-erd-glyph"/>
+<rect x="396.61250000000007" y="1314.5" width="92" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="442.61250000000007" y="1323.5" class="lt-erd-edge-label">default_scope</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ACCOUNT" data-sx-live-end="OPPORTUNITY" data-sx-live-mode="orthogonal"><path d="M 251.20000000000002 609 L 279.20000000000005 609 L 279.20000000000005 862 L 307.20000000000005 862" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="269.20000000000005" y1="615" x2="269.20000000000005" y2="603" class="lt-erd-glyph"/>
+<circle cx="289.20000000000005" cy="862" r="4" class="lt-erd-glyph-circle"/><line x1="297.20000000000005" y1="862" x2="307.20000000000005" y2="862" class="lt-erd-glyph"/><line x1="297.20000000000005" y1="862" x2="307.20000000000005" y2="856" class="lt-erd-glyph"/><line x1="297.20000000000005" y1="862" x2="307.20000000000005" y2="868" class="lt-erd-glyph"/>
+<rect x="251.20000000000005" y="720.5" width="56" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="279.20000000000005" y="729.5" class="lt-erd-edge-label">pursues</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ACCOUNT" data-sx-live-end="CASE" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 658 L 161.20000000000002 1654 L 704.8000000000002 1654 L 704.8000000000002 2650" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="155.20000000000002" y1="676" x2="167.20000000000002" y2="676" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2632" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2640" x2="704.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="710.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="698.8000000000002" y2="2650" class="lt-erd-glyph"/>
+<rect x="405.0000000000001" y="1639" width="56" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="433.0000000000001" y="1648" class="lt-erd-edge-label">reports</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ACCOUNT" data-sx-live-end="CUSTOMER_ALERT" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 658 L 161.20000000000002 1319.5 L 988.3250000000002 1319.5 L 988.3250000000002 2001" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="155.20000000000002" y1="676" x2="167.20000000000002" y2="676" class="lt-erd-glyph"/>
+<circle cx="988.3250000000002" cy="1983" r="4" class="lt-erd-glyph-circle"/><line x1="988.3250000000002" y1="1991" x2="988.3250000000002" y2="2001" class="lt-erd-glyph"/><line x1="988.3250000000002" y1="1991" x2="994.3250000000002" y2="2001" class="lt-erd-glyph"/><line x1="988.3250000000002" y1="1991" x2="982.3250000000002" y2="2001" class="lt-erd-glyph"/>
+<rect x="543.7625" y="1304.5" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="574.7625" y="1313.5" class="lt-erd-edge-label">receives</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="LEAD" data-sx-live-end="ACCOUNT" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 493 L 161.20000000000002 526.5 L 161.20000000000002 526.5 L 161.20000000000002 560" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="161.20000000000002" cy="511" r="4" class="lt-erd-glyph-circle"/>
+<line x1="167.20000000000002" y1="542" x2="155.20000000000002" y2="542" class="lt-erd-glyph"/>
+<rect x="121.20000000000002" y="511.5" width="80" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="161.20000000000002" y="520.5" class="lt-erd-edge-label">converts_to</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="LEAD" data-sx-live-end="CONTACT" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 493 L 161.20000000000002 653 L 161.20000000000002 653 L 161.20000000000002 813" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="161.20000000000002" cy="511" r="4" class="lt-erd-glyph-circle"/>
+<line x1="167.20000000000002" y1="795" x2="155.20000000000002" y2="795" class="lt-erd-glyph"/>
+<rect x="121.20000000000002" y="638" width="80" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="161.20000000000002" y="647" class="lt-erd-edge-label">converts_to</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="LEAD" data-sx-live-end="OPPORTUNITY" data-sx-live-mode="orthogonal"><path d="M 161.20000000000002 493 L 161.20000000000002 603.5 L 439.75000000000006 603.5 L 439.75000000000006 714" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="161.20000000000002" cy="511" r="4" class="lt-erd-glyph-circle"/>
+<line x1="445.75000000000006" y1="696" x2="433.75000000000006" y2="696" class="lt-erd-glyph"/>
+<rect x="260.475" y="588.5" width="80" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="300.475" y="597.5" class="lt-erd-edge-label">converts_to</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="OPPORTUNITY" data-sx-live-end="QUOTE" data-sx-live-mode="orthogonal"><path d="M 439.75000000000006 1010 L 439.75000000000006 1043.5 L 439.75000000000006 1043.5 L 439.75000000000006 1077" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="433.75000000000006" y1="1028" x2="445.75000000000006" y2="1028" class="lt-erd-glyph"/>
+<circle cx="439.75000000000006" cy="1059" r="4" class="lt-erd-glyph-circle"/><line x1="439.75000000000006" y1="1067" x2="439.75000000000006" y2="1077" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1067" x2="445.75000000000006" y2="1077" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1067" x2="433.75000000000006" y2="1077" class="lt-erd-glyph"/>
+<rect x="396.75000000000006" y="1028.5" width="86" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="439.75000000000006" y="1037.5" class="lt-erd-edge-label">has_versions</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="OPPORTUNITY" data-sx-live-end="TECHNICAL_REVIEW" data-sx-live-mode="orthogonal"><path d="M 572.3000000000001 862 L 713.95 862 L 713.95 1126 L 855.6000000000001 1126" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="590.3000000000001" y1="868" x2="590.3000000000001" y2="856" class="lt-erd-glyph"/>
+<circle cx="837.6000000000001" cy="1126" r="4" class="lt-erd-glyph-circle"/><line x1="845.6000000000001" y1="1126" x2="855.6000000000001" y2="1126" class="lt-erd-glyph"/><line x1="845.6000000000001" y1="1126" x2="855.6000000000001" y2="1120" class="lt-erd-glyph"/><line x1="845.6000000000001" y1="1126" x2="855.6000000000001" y2="1132" class="lt-erd-glyph"/>
+<rect x="682.95" y="979" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="713.95" y="988" class="lt-erd-edge-label">requires</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="OPPORTUNITY" data-sx-live-end="CUSTOMER_COMMITMENT" data-sx-live-mode="orthogonal"><path d="M 439.75000000000006 1010 L 439.75000000000006 1038 L 697.2 1038 L 697.2 1066" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="433.75000000000006" y1="1028" x2="445.75000000000006" y2="1028" class="lt-erd-glyph"/>
+<circle cx="697.2" cy="1048" r="4" class="lt-erd-glyph-circle"/><line x1="697.2" y1="1056" x2="697.2" y2="1066" class="lt-erd-glyph"/><line x1="697.2" y1="1056" x2="703.2" y2="1066" class="lt-erd-glyph"/><line x1="697.2" y1="1056" x2="691.2" y2="1066" class="lt-erd-glyph"/>
+<rect x="540.475" y="1023" width="56" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="568.475" y="1032" class="lt-erd-edge-label">records</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="OPPORTUNITY" data-sx-live-end="TECHNICAL_BASELINE" data-sx-live-mode="orthogonal"><path d="M 439.75000000000006 1010 L 439.75000000000006 1126 L 439.75000000000006 1126 L 439.75000000000006 1242" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="433.75000000000006" y1="1028" x2="445.75000000000006" y2="1028" class="lt-erd-glyph"/>
+<circle cx="439.75000000000006" cy="1224" r="4" class="lt-erd-glyph-circle"/><line x1="439.75000000000006" y1="1232" x2="439.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="445.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="433.75000000000006" y2="1242" class="lt-erd-glyph"/>
+<rect x="399.75000000000006" y="1111" width="80" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="439.75000000000006" y="1120" class="lt-erd-edge-label">context_for</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="QUOTE" data-sx-live-end="TECHNICAL_BASELINE" data-sx-live-mode="orthogonal"><path d="M 439.75000000000006 1175 L 439.75000000000006 1208.5 L 439.75000000000006 1208.5 L 439.75000000000006 1242" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="433.75000000000006" y1="1193" x2="445.75000000000006" y2="1193" class="lt-erd-glyph"/>
+<circle cx="439.75000000000006" cy="1224" r="4" class="lt-erd-glyph-circle"/><line x1="439.75000000000006" y1="1232" x2="439.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="445.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="433.75000000000006" y2="1242" class="lt-erd-glyph"/>
+<rect x="405.75000000000006" y="1193.5" width="68" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="439.75000000000006" y="1202.5" class="lt-erd-edge-label">quoted_by</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CUSTOMER_COMMITMENT" data-sx-live-end="CONTRACT" data-sx-live-mode="orthogonal"><path d="M 697.2 1066 L 697.2 609 L 389.65000000000003 609 L 389.65000000000003 152" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="697.2" cy="1048" r="4" class="lt-erd-glyph-circle"/><line x1="697.2" y1="1056" x2="697.2" y2="1066" class="lt-erd-glyph"/><line x1="697.2" y1="1056" x2="703.2" y2="1066" class="lt-erd-glyph"/><line x1="697.2" y1="1056" x2="691.2" y2="1066" class="lt-erd-glyph"/>
+<line x1="383.65000000000003" y1="170" x2="395.65000000000003" y2="170" class="lt-erd-glyph"/>
+<rect x="506.42500000000007" y="594" width="74" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="543.4250000000001" y="603" class="lt-erd-edge-label">commits_to</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CUSTOMER_COMMITMENT" data-sx-live-end="TECHNICAL_BASELINE" data-sx-live-mode="orthogonal"><path d="M 697.2 1186 L 697.2 1214 L 439.75000000000006 1214 L 439.75000000000006 1242" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="691.2" y1="1204" x2="703.2" y2="1204" class="lt-erd-glyph"/>
+<circle cx="439.75000000000006" cy="1224" r="4" class="lt-erd-glyph-circle"/><line x1="439.75000000000006" y1="1232" x2="439.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="445.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="433.75000000000006" y2="1242" class="lt-erd-glyph"/>
+<rect x="531.475" y="1199" width="74" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="568.475" y="1208" class="lt-erd-edge-label">constrains</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CONTRACT" data-sx-live-end="TECHNICAL_BASELINE" data-sx-live-mode="orthogonal"><path d="M 389.65000000000003 152 L 389.65000000000003 697 L 439.75000000000006 697 L 439.75000000000006 1242" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="383.65000000000003" y1="170" x2="395.65000000000003" y2="170" class="lt-erd-glyph"/>
+<circle cx="439.75000000000006" cy="1224" r="4" class="lt-erd-glyph-circle"/><line x1="439.75000000000006" y1="1232" x2="439.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="445.75000000000006" y2="1242" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1232" x2="433.75000000000006" y2="1242" class="lt-erd-glyph"/>
+<rect x="386.70000000000005" y="682" width="56" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="414.70000000000005" y="691" class="lt-erd-edge-label">governs</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="TECHNICAL_BASELINE" data-sx-live-end="TECHNICAL_BASELINE_SPEC" data-sx-live-mode="orthogonal"><path d="M 439.75000000000006 1560 L 439.75000000000006 1648.5 L 439.75000000000006 1648.5 L 439.75000000000006 1737" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="433.75000000000006" y1="1578" x2="445.75000000000006" y2="1578" class="lt-erd-glyph"/>
+<circle cx="439.75000000000006" cy="1719" r="4" class="lt-erd-glyph-circle"/><line x1="439.75000000000006" y1="1727" x2="439.75000000000006" y2="1737" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1727" x2="445.75000000000006" y2="1737" class="lt-erd-glyph"/><line x1="439.75000000000006" y1="1727" x2="433.75000000000006" y2="1737" class="lt-erd-glyph"/>
+<rect x="408.75000000000006" y="1633.5" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="439.75000000000006" y="1642.5" class="lt-erd-edge-label">contains</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CONTRACT" data-sx-live-end="CHANGE_REQUEST" data-sx-live-mode="orthogonal"><path d="M 389.65000000000003 152 L 389.65000000000003 181 L 528.0000000000001 181 L 528.0000000000001 230" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="383.65000000000003" y1="170" x2="395.65000000000003" y2="170" class="lt-erd-glyph"/>
+<circle cx="528.0000000000001" cy="212" r="4" class="lt-erd-glyph-circle"/><line x1="528.0000000000001" y1="220" x2="528.0000000000001" y2="230" class="lt-erd-glyph"/><line x1="528.0000000000001" y1="220" x2="534.0000000000001" y2="230" class="lt-erd-glyph"/><line x1="528.0000000000001" y1="220" x2="522.0000000000001" y2="230" class="lt-erd-glyph"/>
+<rect x="433.82500000000005" y="166" width="50" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="458.82500000000005" y="175" class="lt-erd-edge-label">scopes</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CHANGE_REQUEST" data-sx-live-end="CHANGE_REQUEST_RELATED_ITEM" data-sx-live-mode="orthogonal"><path d="M 528.0000000000001 504 L 528.0000000000001 1247 L 1250.9250000000002 1247 L 1250.9250000000002 1990" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="522.0000000000001" y1="522" x2="534.0000000000001" y2="522" class="lt-erd-glyph"/>
+<circle cx="1250.9250000000002" cy="1972" r="4" class="lt-erd-glyph-circle"/><line x1="1250.9250000000002" y1="1980" x2="1250.9250000000002" y2="1990" class="lt-erd-glyph"/><line x1="1250.9250000000002" y1="1980" x2="1256.9250000000002" y2="1990" class="lt-erd-glyph"/><line x1="1250.9250000000002" y1="1980" x2="1244.9250000000002" y2="1990" class="lt-erd-glyph"/>
+<rect x="861.4625000000001" y="1232" width="56" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="889.4625000000001" y="1241" class="lt-erd-edge-label">affects</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ASSET" data-sx-live-end="CHANGE_REQUEST_RELATED_ITEM" data-sx-live-mode="orthogonal"><path d="M 869.1000000000001 1775 L 1001.7125000000002 1775 L 1001.7125000000002 2061 L 1134.3250000000003 2061" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="887.1000000000001" y1="1781" x2="887.1000000000001" y2="1769" class="lt-erd-glyph"/>
+<circle cx="1116.3250000000003" cy="2061" r="4" class="lt-erd-glyph-circle"/><line x1="1124.3250000000003" y1="2061" x2="1134.3250000000003" y2="2061" class="lt-erd-glyph"/><line x1="1124.3250000000003" y1="2061" x2="1134.3250000000003" y2="2055" class="lt-erd-glyph"/><line x1="1124.3250000000003" y1="2061" x2="1134.3250000000003" y2="2067" class="lt-erd-glyph"/>
+<rect x="952.7125000000002" y="1903" width="98" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="1001.7125000000002" y="1912" class="lt-erd-edge-label">is_affected_by</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="TECHNICAL_BASELINE" data-sx-live-end="ASSET" data-sx-live-mode="orthogonal"><path d="M 439.75000000000006 1560 L 439.75000000000006 1588 L 743.2500000000001 1588 L 743.2500000000001 1616" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="433.75000000000006" y1="1578" x2="445.75000000000006" y2="1578" class="lt-erd-glyph"/>
+<circle cx="743.2500000000001" cy="1598" r="4" class="lt-erd-glyph-circle"/><line x1="743.2500000000001" y1="1606" x2="743.2500000000001" y2="1616" class="lt-erd-glyph"/><line x1="743.2500000000001" y1="1606" x2="749.2500000000001" y2="1616" class="lt-erd-glyph"/><line x1="743.2500000000001" y1="1606" x2="737.2500000000001" y2="1616" class="lt-erd-glyph"/>
+<rect x="554.5000000000001" y="1573" width="74" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="591.5000000000001" y="1582" class="lt-erd-edge-label">applied_to</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ASSET" data-sx-live-end="WORK_ORDER" data-sx-live-mode="orthogonal"><path d="M 743.2500000000001 1934 L 743.2500000000001 2061 L 704.8000000000002 2061 L 704.8000000000002 2188" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="737.2500000000001" y1="1952" x2="749.2500000000001" y2="1952" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2170" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2178" x2="704.8000000000002" y2="2188" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2178" x2="710.8000000000002" y2="2188" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2178" x2="698.8000000000002" y2="2188" class="lt-erd-glyph"/>
+<rect x="645.0250000000001" y="2046" width="158" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="724.0250000000001" y="2055" class="lt-erd-edge-label">installed_or_accepted_by</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ENTITLEMENT_PROCESS" data-sx-live-end="ENTITLEMENT" data-sx-live-mode="orthogonal"><path d="M 911.4000000000001 152 L 911.4000000000001 1076.5 L 724.0250000000001 1076.5 L 724.0250000000001 2001" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="905.4000000000001" y1="170" x2="917.4000000000001" y2="170" class="lt-erd-glyph"/>
+<circle cx="724.0250000000001" cy="1983" r="4" class="lt-erd-glyph-circle"/><line x1="724.0250000000001" y1="1991" x2="724.0250000000001" y2="2001" class="lt-erd-glyph"/><line x1="724.0250000000001" y1="1991" x2="730.0250000000001" y2="2001" class="lt-erd-glyph"/><line x1="724.0250000000001" y1="1991" x2="718.0250000000001" y2="2001" class="lt-erd-glyph"/>
+<rect x="789.7125000000001" y="1061.5" width="56" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="817.7125000000001" y="1070.5" class="lt-erd-edge-label">defines</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ASSET" data-sx-live-end="ENTITLEMENT" data-sx-live-mode="orthogonal"><path d="M 743.2500000000001 1934 L 743.2500000000001 1967.5 L 724.0250000000001 1967.5 L 724.0250000000001 2001" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="743.2500000000001" cy="1952" r="4" class="lt-erd-glyph-circle"/>
+<circle cx="724.0250000000001" cy="1983" r="4" class="lt-erd-glyph-circle"/><line x1="724.0250000000001" y1="1991" x2="724.0250000000001" y2="2001" class="lt-erd-glyph"/><line x1="724.0250000000001" y1="1991" x2="730.0250000000001" y2="2001" class="lt-erd-glyph"/><line x1="724.0250000000001" y1="1991" x2="718.0250000000001" y2="2001" class="lt-erd-glyph"/>
+<rect x="681.6375" y="1952.5" width="104" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="733.6375" y="1961.5" class="lt-erd-edge-label">exception_scope</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ENTITLEMENT" data-sx-live-end="CASE" data-sx-live-mode="orthogonal"><path d="M 724.0250000000001 2121 L 724.0250000000001 2385.5 L 704.8000000000002 2385.5 L 704.8000000000002 2650" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="718.0250000000001" y1="2139" x2="730.0250000000001" y2="2139" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2632" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2640" x2="704.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="710.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="698.8000000000002" y2="2650" class="lt-erd-glyph"/>
+<rect x="677.4125000000001" y="2370.5" width="74" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="714.4125000000001" y="2379.5" class="lt-erd-edge-label">applies_to</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ASSET" data-sx-live-end="CASE" data-sx-live-mode="orthogonal"><path d="M 743.2500000000001 1934 L 743.2500000000001 2292 L 704.8000000000002 2292 L 704.8000000000002 2650" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="737.2500000000001" y1="1952" x2="749.2500000000001" y2="1952" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2632" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2640" x2="704.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="710.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="698.8000000000002" y2="2650" class="lt-erd-glyph"/>
+<rect x="681.0250000000001" y="2277" width="86" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="724.0250000000001" y="2286" class="lt-erd-edge-label">incident_for</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CASE" data-sx-live-end="WORK_ORDER" data-sx-live-mode="orthogonal"><path d="M 704.8000000000002 2650 L 704.8000000000002 2622 L 704.8000000000002 2622 L 704.8000000000002 2594" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="710.8000000000002" y1="2632" x2="698.8000000000002" y2="2632" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2612" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2604" x2="704.8000000000002" y2="2594" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2604" x2="698.8000000000002" y2="2594" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2604" x2="710.8000000000002" y2="2594" class="lt-erd-glyph"/>
+<rect x="658.8000000000002" y="2607" width="92" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="704.8000000000002" y="2616" class="lt-erd-edge-label">reactive_work</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="WORK_ORDER" data-sx-live-end="CASE" data-sx-live-mode="orthogonal"><path d="M 704.8000000000002 2594 L 704.8000000000002 2612 L 704.8000000000002 2612 L 704.8000000000002 2650" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="704.8000000000002" cy="2612" r="4" class="lt-erd-glyph-circle"/>
+<circle cx="704.8000000000002" cy="2632" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2640" x2="704.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="710.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="698.8000000000002" y2="2650" class="lt-erd-glyph"/>
+<rect x="637.8000000000002" y="2597" width="134" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="704.8000000000002" y="2606" class="lt-erd-edge-label">preventive_discovery</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ASSET" data-sx-live-end="WORK_ORDER" data-sx-live-mode="orthogonal"><path d="M 743.2500000000001 1934 L 743.2500000000001 2051 L 704.8000000000002 2051 L 704.8000000000002 2188" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="737.2500000000001" y1="1952" x2="749.2500000000001" y2="1952" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2170" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2178" x2="704.8000000000002" y2="2188" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2178" x2="710.8000000000002" y2="2188" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2178" x2="698.8000000000002" y2="2188" class="lt-erd-glyph"/>
+<rect x="684.0250000000001" y="2036" width="80" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="724.0250000000001" y="2045" class="lt-erd-edge-label">serviced_by</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="WORK_ORDER" data-sx-live-end="WORK_ORDER_LINE_ITEM" data-sx-live-mode="orthogonal"><path d="M 704.8000000000002 2594 L 704.8000000000002 2798 L 704.8000000000002 2798 L 704.8000000000002 3002" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="698.8000000000002" y1="2612" x2="710.8000000000002" y2="2612" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2984" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2992" x2="704.8000000000002" y2="3002" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2992" x2="710.8000000000002" y2="3002" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2992" x2="698.8000000000002" y2="3002" class="lt-erd-glyph"/>
+<rect x="673.8000000000002" y="2783" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="704.8000000000002" y="2792" class="lt-erd-edge-label">contains</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="WORK_ORDER_LINE_ITEM" data-sx-live-end="WORK_ORDER_LINE_ITEM" data-sx-live-mode="orthogonal"><path d="M 820.6000000000003 3150 L 704.8000000000002 3150 L 704.8000000000002 3150 L 589.0000000000002 3150" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="838.6000000000003" y1="3156" x2="838.6000000000003" y2="3144" class="lt-erd-glyph"/>
+<circle cx="571.0000000000002" cy="3150" r="4" class="lt-erd-glyph-circle"/><line x1="579.0000000000002" y1="3150" x2="589.0000000000002" y2="3150" class="lt-erd-glyph"/><line x1="579.0000000000002" y1="3150" x2="589.0000000000002" y2="3144" class="lt-erd-glyph"/><line x1="579.0000000000002" y1="3150" x2="589.0000000000002" y2="3156" class="lt-erd-glyph"/>
+<rect x="658.8000000000002" y="3135" width="92" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="704.8000000000002" y="3144" class="lt-erd-edge-label">retest_parent</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="ASSET" data-sx-live-end="CUSTOMER_ALERT" data-sx-live-mode="orthogonal"><path d="M 743.2500000000001 1934 L 743.2500000000001 1957.5 L 988.3250000000002 1957.5 L 988.3250000000002 2001" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="737.2500000000001" y1="1952" x2="749.2500000000001" y2="1952" class="lt-erd-glyph"/>
+<circle cx="988.3250000000002" cy="1983" r="4" class="lt-erd-glyph-circle"/><line x1="988.3250000000002" y1="1991" x2="988.3250000000002" y2="2001" class="lt-erd-glyph"/><line x1="988.3250000000002" y1="1991" x2="994.3250000000002" y2="2001" class="lt-erd-glyph"/><line x1="988.3250000000002" y1="1991" x2="982.3250000000002" y2="2001" class="lt-erd-glyph"/>
+<rect x="840.7875000000001" y="1942.5" width="50" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="865.7875000000001" y="1951.5" class="lt-erd-edge-label">raises</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PRODUCT2" data-sx-live-end="ASSET" data-sx-live-mode="orthogonal"><path d="M 1163.15 152 L 1163.15 884 L 743.2500000000001 884 L 743.2500000000001 1616" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="1157.15" y1="170" x2="1169.15" y2="170" class="lt-erd-glyph"/>
+<circle cx="743.2500000000001" cy="1598" r="4" class="lt-erd-glyph-circle"/><line x1="743.2500000000001" y1="1606" x2="743.2500000000001" y2="1616" class="lt-erd-glyph"/><line x1="743.2500000000001" y1="1606" x2="749.2500000000001" y2="1616" class="lt-erd-glyph"/><line x1="743.2500000000001" y1="1606" x2="737.2500000000001" y2="1616" class="lt-erd-glyph"/>
+<rect x="922.2" y="869" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="953.2" y="878" class="lt-erd-edge-label">model_of</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="IOT_READING_EVENT" data-sx-live-end="ASSET" data-sx-live-mode="orthogonal"><path d="M 1423.5250000000003 2061 L 1146.3125000000002 2061 L 1146.3125000000002 1775 L 869.1000000000001 1775" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="1405.5250000000003" cy="2061" r="4" class="lt-erd-glyph-circle"/><line x1="1413.5250000000003" y1="2061" x2="1423.5250000000003" y2="2061" class="lt-erd-glyph"/><line x1="1413.5250000000003" y1="2061" x2="1423.5250000000003" y2="2055" class="lt-erd-glyph"/><line x1="1413.5250000000003" y1="2061" x2="1423.5250000000003" y2="2067" class="lt-erd-glyph"/>
+<line x1="887.1000000000001" y1="1781" x2="887.1000000000001" y2="1769" class="lt-erd-glyph"/>
+<rect x="1115.3125000000002" y="1903" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="1146.3125000000002" y="1912" class="lt-erd-edge-label">observes</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROBLEM" data-sx-live-end="CASE" data-sx-live-mode="orthogonal"><path d="M 666.3500000000001 174 L 666.3500000000001 1412 L 704.8000000000002 1412 L 704.8000000000002 2650" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="660.3500000000001" y1="192" x2="672.3500000000001" y2="192" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2632" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2640" x2="704.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="710.8000000000002" y2="2650" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2640" x2="698.8000000000002" y2="2650" class="lt-erd-glyph"/>
+<rect x="654.5750000000002" y="1397" width="62" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="685.5750000000002" y="1406" class="lt-erd-edge-label">explains</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROBLEM" data-sx-live-end="WORK_ORDER" data-sx-live-mode="orthogonal"><path d="M 666.3500000000001 174 L 666.3500000000001 1181 L 704.8000000000002 1181 L 704.8000000000002 2188" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="660.3500000000001" y1="192" x2="672.3500000000001" y2="192" class="lt-erd-glyph"/>
+<circle cx="704.8000000000002" cy="2170" r="4" class="lt-erd-glyph-circle"/><line x1="704.8000000000002" y1="2178" x2="704.8000000000002" y2="2188" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2178" x2="710.8000000000002" y2="2188" class="lt-erd-glyph"/><line x1="704.8000000000002" y1="2178" x2="698.8000000000002" y2="2188" class="lt-erd-glyph"/>
+<rect x="660.5750000000002" y="1166" width="50" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="685.5750000000002" y="1175" class="lt-erd-edge-label">drives</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROBLEM" data-sx-live-end="CHANGE_REQUEST" data-sx-live-mode="orthogonal"><path d="M 666.3500000000001 174 L 666.3500000000001 202 L 528.0000000000001 202 L 528.0000000000001 230" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="660.3500000000001" y1="192" x2="672.3500000000001" y2="192" class="lt-erd-glyph"/>
+<circle cx="528.0000000000001" cy="212" r="4" class="lt-erd-glyph-circle"/><line x1="528.0000000000001" y1="220" x2="528.0000000000001" y2="230" class="lt-erd-glyph"/><line x1="528.0000000000001" y1="220" x2="534.0000000000001" y2="230" class="lt-erd-glyph"/><line x1="528.0000000000001" y1="220" x2="522.0000000000001" y2="230" class="lt-erd-glyph"/>
+<rect x="557.1750000000002" y="187" width="80" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="597.1750000000002" y="196" class="lt-erd-edge-label">may_require</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="CASE" data-sx-live-end="CASE_MILESTONE" data-sx-live-mode="orthogonal"><path d="M 704.8000000000002 2946 L 704.8000000000002 3023.5 L 978.1500000000002 3023.5 L 978.1500000000002 3101" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="698.8000000000002" y1="2964" x2="710.8000000000002" y2="2964" class="lt-erd-glyph"/>
+<circle cx="978.1500000000002" cy="3083" r="4" class="lt-erd-glyph-circle"/><line x1="978.1500000000002" y1="3091" x2="978.1500000000002" y2="3101" class="lt-erd-glyph"/><line x1="978.1500000000002" y1="3091" x2="984.1500000000002" y2="3101" class="lt-erd-glyph"/><line x1="978.1500000000002" y1="3091" x2="972.1500000000002" y2="3101" class="lt-erd-glyph"/>
+<rect x="798.4750000000001" y="3008.5" width="86" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="841.4750000000001" y="3017.5" class="lt-erd-edge-label">measures_sla</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROCESS_INSTANCE" data-sx-live-end="OPPORTUNITY" data-sx-live-mode="orthogonal"><path d="M 1015.1000000000001 1726 L 1015.1000000000001 1368 L 439.75000000000006 1368 L 439.75000000000006 1010" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="1015.1000000000001" cy="1708" r="4" class="lt-erd-glyph-circle"/><line x1="1015.1000000000001" y1="1716" x2="1015.1000000000001" y2="1726" class="lt-erd-glyph"/><line x1="1015.1000000000001" y1="1716" x2="1021.1000000000001" y2="1726" class="lt-erd-glyph"/><line x1="1015.1000000000001" y1="1716" x2="1009.1000000000001" y2="1726" class="lt-erd-glyph"/>
+<line x1="433.75000000000006" y1="1028" x2="445.75000000000006" y2="1028" class="lt-erd-glyph"/>
+<rect x="672.4250000000001" y="1353" width="110" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="727.4250000000001" y="1362" class="lt-erd-edge-label">approval_history</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROCESS_INSTANCE" data-sx-live-end="CUSTOMER_COMMITMENT" data-sx-live-mode="orthogonal"><path d="M 1015.1000000000001 1726 L 1015.1000000000001 1456 L 697.2 1456 L 697.2 1186" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="1015.1000000000001" cy="1708" r="4" class="lt-erd-glyph-circle"/><line x1="1015.1000000000001" y1="1716" x2="1015.1000000000001" y2="1726" class="lt-erd-glyph"/><line x1="1015.1000000000001" y1="1716" x2="1021.1000000000001" y2="1726" class="lt-erd-glyph"/><line x1="1015.1000000000001" y1="1716" x2="1009.1000000000001" y2="1726" class="lt-erd-glyph"/>
+<line x1="691.2" y1="1204" x2="703.2" y2="1204" class="lt-erd-glyph"/>
+<rect x="801.1500000000001" y="1441" width="110" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="856.1500000000001" y="1450" class="lt-erd-edge-label">approval_history</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROCESS_INSTANCE" data-sx-live-end="TECHNICAL_BASELINE" data-sx-live-mode="orthogonal"><path d="M 925.1000000000001 1775 L 744.9250000000002 1775 L 744.9250000000002 1401 L 564.7500000000001 1401" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="907.1000000000001" cy="1775" r="4" class="lt-erd-glyph-circle"/><line x1="915.1000000000001" y1="1775" x2="925.1000000000001" y2="1775" class="lt-erd-glyph"/><line x1="915.1000000000001" y1="1775" x2="925.1000000000001" y2="1769" class="lt-erd-glyph"/><line x1="915.1000000000001" y1="1775" x2="925.1000000000001" y2="1781" class="lt-erd-glyph"/>
+<line x1="582.7500000000001" y1="1407" x2="582.7500000000001" y2="1395" class="lt-erd-glyph"/>
+<rect x="689.9250000000002" y="1573" width="110" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="744.9250000000002" y="1582" class="lt-erd-edge-label">approval_history</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROCESS_INSTANCE" data-sx-live-end="CHANGE_REQUEST" data-sx-live-mode="orthogonal"><path d="M 1015.1000000000001 1726 L 1015.1000000000001 1115 L 528.0000000000001 1115 L 528.0000000000001 504" class="lt-erd-edge" data-sx-live-edge="true"/>
+<circle cx="1015.1000000000001" cy="1708" r="4" class="lt-erd-glyph-circle"/><line x1="1015.1000000000001" y1="1716" x2="1015.1000000000001" y2="1726" class="lt-erd-glyph"/><line x1="1015.1000000000001" y1="1716" x2="1021.1000000000001" y2="1726" class="lt-erd-glyph"/><line x1="1015.1000000000001" y1="1716" x2="1009.1000000000001" y2="1726" class="lt-erd-glyph"/>
+<line x1="522.0000000000001" y1="522" x2="534.0000000000001" y2="522" class="lt-erd-glyph"/>
+<rect x="716.5500000000002" y="1100" width="110" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="771.5500000000002" y="1109" class="lt-erd-edge-label">approval_history</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="WORK_ORDER" data-sx-live-end="SERVICE_APPOINTMENT" data-sx-live-mode="orthogonal"><path d="M 704.8000000000002 2594 L 704.8000000000002 2671.5 L 1009.3000000000002 2671.5 L 1009.3000000000002 2749" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="698.8000000000002" y1="2612" x2="710.8000000000002" y2="2612" class="lt-erd-glyph"/>
+<circle cx="1009.3000000000002" cy="2731" r="4" class="lt-erd-glyph-circle"/><line x1="1009.3000000000002" y1="2739" x2="1009.3000000000002" y2="2749" class="lt-erd-glyph"/><line x1="1009.3000000000002" y1="2739" x2="1015.3000000000002" y2="2749" class="lt-erd-glyph"/><line x1="1009.3000000000002" y1="2739" x2="1003.3000000000002" y2="2749" class="lt-erd-glyph"/>
+<rect x="823.0500000000002" y="2656.5" width="68" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="857.0500000000002" y="2665.5" class="lt-erd-edge-label">schedules</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="SERVICE_APPOINTMENT" data-sx-live-end="ASSIGNED_RESOURCE" data-sx-live-mode="orthogonal"><path d="M 1009.3000000000002 2847 L 1009.3000000000002 2974 L 1254.0000000000002 2974 L 1254.0000000000002 3101" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="1003.3000000000002" y1="2865" x2="1015.3000000000002" y2="2865" class="lt-erd-glyph"/>
+<circle cx="1254.0000000000002" cy="3083" r="4" class="lt-erd-glyph-circle"/><line x1="1254.0000000000002" y1="3091" x2="1254.0000000000002" y2="3101" class="lt-erd-glyph"/><line x1="1254.0000000000002" y1="3091" x2="1260.0000000000002" y2="3101" class="lt-erd-glyph"/><line x1="1254.0000000000002" y1="3091" x2="1248.0000000000002" y2="3101" class="lt-erd-glyph"/>
+<rect x="1115.65" y="2959" width="32" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="1131.65" y="2968" class="lt-erd-edge-label">has</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="SERVICE_RESOURCE" data-sx-live-end="ASSIGNED_RESOURCE" data-sx-live-mode="orthogonal"><path d="M 1414.9 152 L 1414.9 1626.5 L 1254.0000000000002 1626.5 L 1254.0000000000002 3101" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="1408.9" y1="170" x2="1420.9" y2="170" class="lt-erd-glyph"/>
+<circle cx="1254.0000000000002" cy="3083" r="4" class="lt-erd-glyph-circle"/><line x1="1254.0000000000002" y1="3091" x2="1254.0000000000002" y2="3101" class="lt-erd-glyph"/><line x1="1254.0000000000002" y1="3091" x2="1260.0000000000002" y2="3101" class="lt-erd-glyph"/><line x1="1254.0000000000002" y1="3091" x2="1248.0000000000002" y2="3101" class="lt-erd-glyph"/>
+<rect x="1297.4500000000003" y="1611.5" width="74" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="1334.4500000000003" y="1620.5" class="lt-erd-edge-label">staffed_by</text></g>
+<g class="lt-erd-edge-group" data-sx-live-explicit="true" data-sx-live-start="PROBLEM" data-sx-live-end="KNOWLEDGE_ARTICLE" data-sx-live-mode="orthogonal"><path d="M 666.3500000000001 174 L 666.3500000000001 246 L 799.8500000000001 246 L 799.8500000000001 318" class="lt-erd-edge" data-sx-live-edge="true"/>
+<line x1="660.3500000000001" y1="192" x2="672.3500000000001" y2="192" class="lt-erd-glyph"/>
+<circle cx="799.8500000000001" cy="300" r="4" class="lt-erd-glyph-circle"/><line x1="799.8500000000001" y1="308" x2="799.8500000000001" y2="318" class="lt-erd-glyph"/><line x1="799.8500000000001" y1="308" x2="805.8500000000001" y2="318" class="lt-erd-glyph"/><line x1="799.8500000000001" y1="308" x2="793.8500000000001" y2="318" class="lt-erd-glyph"/>
+<rect x="699.1000000000001" y="231" width="68" height="16" rx="3" class="lt-erd-edge-label-bg"/>
+<text x="733.1000000000001" y="240" class="lt-erd-edge-label">documents</text></g></g>
+<g class="lt-erd-entities" transform="translate(0, 0)"><g class="lt-erd-entity sx-interactive-movable" data-id="CAMPAIGN" data-sx-key="node:CAMPAIGN" data-sx-owner="node:CAMPAIGN" data-sx-interactive-position="move-x"><rect x="32" y="65" width="180" height="76" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 32 69 Q 32 65 36 65 L 208 65 Q 212 65 212 69 L 212 93 L 32 93 Z" class="lt-erd-entity-header-bg"/>
+<text x="122" y="79" class="lt-erd-entity-header">CAMPAIGN</text>
+<text x="46" y="104" class="lt-erd-attr-name-pk" data-sx-key="node:CAMPAIGN:attr:0:name" data-sx-role="label">Id</text>
+<text x="164" y="104" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CAMPAIGN:attr:0:type" data-sx-role="label">string</text>
+<rect x="172" y="96" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="185" y="105" class="lt-erd-attr-marker">PK</text>
+<line x1="32" y1="115" x2="212" y2="115" class="lt-erd-row-divider"/>
+<text x="46" y="126" class="lt-erd-attr-name" data-sx-key="node:CAMPAIGN:attr:1:name" data-sx-role="label">Name</text>
+<text x="194" y="126" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CAMPAIGN:attr:1:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CONTRACT" data-sx-key="node:CONTRACT" data-sx-owner="node:CONTRACT" data-sx-interactive-position="move-x"><rect x="268" y="54" width="243.30000000000004" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 268 58 Q 268 54 272 54 L 507.30000000000007 54 Q 511.30000000000007 54 511.30000000000007 58 L 511.30000000000007 82 L 268 82 Z" class="lt-erd-entity-header-bg"/>
+<text x="389.65000000000003" y="68" class="lt-erd-entity-header">CONTRACT</text>
+<text x="282" y="93" class="lt-erd-attr-name-pk" data-sx-key="node:CONTRACT:attr:0:name" data-sx-role="label">Id</text>
+<text x="463.30000000000007" y="93" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CONTRACT:attr:0:type" data-sx-role="label">string</text>
+<rect x="471.30000000000007" y="85" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="484.30000000000007" y="94" class="lt-erd-attr-marker">PK</text>
+<line x1="268" y1="104" x2="511.30000000000007" y2="104" class="lt-erd-row-divider"/>
+<text x="282" y="115" class="lt-erd-attr-name" data-sx-key="node:CONTRACT:attr:1:name" data-sx-role="label">Source_Opportunity__c</text>
+<text x="463.30000000000007" y="115" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CONTRACT:attr:1:type" data-sx-role="label">string</text>
+<rect x="471.30000000000007" y="107" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="484.30000000000007" y="116" class="lt-erd-attr-marker">FK</text>
+<line x1="268" y1="126" x2="511.30000000000007" y2="126" class="lt-erd-row-divider"/>
+<text x="282" y="137" class="lt-erd-attr-name" data-sx-key="node:CONTRACT:attr:2:name" data-sx-role="label">Contract_Version__c</text>
+<text x="493.30000000000007" y="137" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CONTRACT:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="PROBLEM" data-sx-key="node:PROBLEM" data-sx-owner="node:PROBLEM" data-sx-interactive-position="move-x"><rect x="567.3000000000001" y="32" width="198.10000000000002" height="142" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 567.3000000000001 36 Q 567.3000000000001 32 571.3000000000001 32 L 761.4000000000001 32 Q 765.4000000000001 32 765.4000000000001 36 L 765.4000000000001 60 L 567.3000000000001 60 Z" class="lt-erd-entity-header-bg"/>
+<text x="666.3500000000001" y="46" class="lt-erd-entity-header">PROBLEM</text>
+<text x="581.3000000000001" y="71" class="lt-erd-attr-name-pk" data-sx-key="node:PROBLEM:attr:0:name" data-sx-role="label">Id</text>
+<text x="717.4000000000001" y="71" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROBLEM:attr:0:type" data-sx-role="label">string</text>
+<rect x="725.4000000000001" y="63" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="738.4000000000001" y="72" class="lt-erd-attr-marker">PK</text>
+<line x1="567.3000000000001" y1="82" x2="765.4000000000001" y2="82" class="lt-erd-row-divider"/>
+<text x="581.3000000000001" y="93" class="lt-erd-attr-name" data-sx-key="node:PROBLEM:attr:1:name" data-sx-role="label">RootCauseSummary</text>
+<text x="747.4000000000001" y="93" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROBLEM:attr:1:type" data-sx-role="label">string</text>
+<line x1="567.3000000000001" y1="104" x2="765.4000000000001" y2="104" class="lt-erd-row-divider"/>
+<text x="581.3000000000001" y="115" class="lt-erd-attr-name" data-sx-key="node:PROBLEM:attr:2:name" data-sx-role="label">PermanentSolution</text>
+<text x="747.4000000000001" y="115" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROBLEM:attr:2:type" data-sx-role="label">string</text>
+<line x1="567.3000000000001" y1="126" x2="765.4000000000001" y2="126" class="lt-erd-row-divider"/>
+<text x="581.3000000000001" y="137" class="lt-erd-attr-name" data-sx-key="node:PROBLEM:attr:3:name" data-sx-role="label">Category</text>
+<text x="747.4000000000001" y="137" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROBLEM:attr:3:type" data-sx-role="label">string</text>
+<line x1="567.3000000000001" y1="148" x2="765.4000000000001" y2="148" class="lt-erd-row-divider"/>
+<text x="581.3000000000001" y="159" class="lt-erd-attr-name" data-sx-key="node:PROBLEM:attr:4:name" data-sx-role="label">SubCategory</text>
+<text x="747.4000000000001" y="159" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROBLEM:attr:4:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="ENTITLEMENT_PROCESS" data-sx-key="node:ENTITLEMENT_PROCESS" data-sx-owner="node:ENTITLEMENT_PROCESS" data-sx-interactive-position="move-x"><rect x="821.4000000000001" y="54" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 821.4000000000001 58 Q 821.4000000000001 54 825.4000000000001 54 L 997.4000000000001 54 Q 1001.4000000000001 54 1001.4000000000001 58 L 1001.4000000000001 82 L 821.4000000000001 82 Z" class="lt-erd-entity-header-bg"/>
+<text x="911.4000000000001" y="68" class="lt-erd-entity-header">ENTITLEMENT_PROCESS</text>
+<text x="835.4000000000001" y="93" class="lt-erd-attr-name-pk" data-sx-key="node:ENTITLEMENT_PROCESS:attr:0:name" data-sx-role="label">Id</text>
+<text x="953.4000000000001" y="93" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT_PROCESS:attr:0:type" data-sx-role="label">string</text>
+<rect x="961.4000000000001" y="85" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="974.4000000000001" y="94" class="lt-erd-attr-marker">PK</text>
+<line x1="821.4000000000001" y1="104" x2="1001.4000000000001" y2="104" class="lt-erd-row-divider"/>
+<text x="835.4000000000001" y="115" class="lt-erd-attr-name" data-sx-key="node:ENTITLEMENT_PROCESS:attr:1:name" data-sx-role="label">Name</text>
+<text x="983.4000000000001" y="115" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT_PROCESS:attr:1:type" data-sx-role="label">string</text>
+<line x1="821.4000000000001" y1="126" x2="1001.4000000000001" y2="126" class="lt-erd-row-divider"/>
+<text x="835.4000000000001" y="137" class="lt-erd-attr-name" data-sx-key="node:ENTITLEMENT_PROCESS:attr:2:name" data-sx-role="label">IsActive</text>
+<text x="983.4000000000001" y="137" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT_PROCESS:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="PRODUCT2" data-sx-key="node:PRODUCT2" data-sx-owner="node:PRODUCT2" data-sx-interactive-position="move-x"><rect x="1057.4" y="54" width="211.5" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 1057.4 58 Q 1057.4 54 1061.4 54 L 1264.9 54 Q 1268.9 54 1268.9 58 L 1268.9 82 L 1057.4 82 Z" class="lt-erd-entity-header-bg"/>
+<text x="1163.15" y="68" class="lt-erd-entity-header">PRODUCT2</text>
+<text x="1071.4" y="93" class="lt-erd-attr-name-pk" data-sx-key="node:PRODUCT2:attr:0:name" data-sx-role="label">Id</text>
+<text x="1220.9" y="93" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PRODUCT2:attr:0:type" data-sx-role="label">string</text>
+<rect x="1228.9" y="85" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1241.9" y="94" class="lt-erd-attr-marker">PK</text>
+<line x1="1057.4" y1="104" x2="1268.9" y2="104" class="lt-erd-row-divider"/>
+<text x="1071.4" y="115" class="lt-erd-attr-name" data-sx-key="node:PRODUCT2:attr:1:name" data-sx-role="label">Asset_Category__c</text>
+<text x="1250.9" y="115" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PRODUCT2:attr:1:type" data-sx-role="label">string</text>
+<line x1="1057.4" y1="126" x2="1268.9" y2="126" class="lt-erd-row-divider"/>
+<text x="1071.4" y="137" class="lt-erd-attr-name" data-sx-key="node:PRODUCT2:attr:2:name" data-sx-role="label">Asset_Type_Label__c</text>
+<text x="1250.9" y="137" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PRODUCT2:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="SERVICE_RESOURCE" data-sx-key="node:SERVICE_RESOURCE" data-sx-owner="node:SERVICE_RESOURCE" data-sx-interactive-position="move-x"><rect x="1324.9" y="54" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 1324.9 58 Q 1324.9 54 1328.9 54 L 1500.9 54 Q 1504.9 54 1504.9 58 L 1504.9 82 L 1324.9 82 Z" class="lt-erd-entity-header-bg"/>
+<text x="1414.9" y="68" class="lt-erd-entity-header">SERVICE_RESOURCE</text>
+<text x="1338.9" y="93" class="lt-erd-attr-name-pk" data-sx-key="node:SERVICE_RESOURCE:attr:0:name" data-sx-role="label">Id</text>
+<text x="1456.9" y="93" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:SERVICE_RESOURCE:attr:0:type" data-sx-role="label">string</text>
+<rect x="1464.9" y="85" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1477.9" y="94" class="lt-erd-attr-marker">PK</text>
+<line x1="1324.9" y1="104" x2="1504.9" y2="104" class="lt-erd-row-divider"/>
+<text x="1338.9" y="115" class="lt-erd-attr-name" data-sx-key="node:SERVICE_RESOURCE:attr:1:name" data-sx-role="label">Name</text>
+<text x="1486.9" y="115" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:SERVICE_RESOURCE:attr:1:type" data-sx-role="label">string</text>
+<line x1="1324.9" y1="126" x2="1504.9" y2="126" class="lt-erd-row-divider"/>
+<text x="1338.9" y="137" class="lt-erd-attr-name" data-sx-key="node:SERVICE_RESOURCE:attr:2:name" data-sx-role="label">IsActive</text>
+<text x="1486.9" y="137" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:SERVICE_RESOURCE:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="LEAD" data-sx-key="node:LEAD" data-sx-owner="node:LEAD" data-sx-interactive-position="move-x"><rect x="32" y="241" width="258.40000000000003" height="252" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 32 245 Q 32 241 36 241 L 286.40000000000003 241 Q 290.40000000000003 241 290.40000000000003 245 L 290.40000000000003 269 L 32 269 Z" class="lt-erd-entity-header-bg"/>
+<text x="161.20000000000002" y="255" class="lt-erd-entity-header">LEAD</text>
+<text x="46" y="280" class="lt-erd-attr-name-pk" data-sx-key="node:LEAD:attr:0:name" data-sx-role="label">Id</text>
+<text x="242.40000000000003" y="280" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:0:type" data-sx-role="label">string</text>
+<rect x="250.40000000000003" y="272" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="263.40000000000003" y="281" class="lt-erd-attr-marker">PK</text>
+<line x1="32" y1="291" x2="290.40000000000003" y2="291" class="lt-erd-row-divider"/>
+<text x="46" y="302" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:1:name" data-sx-role="label">CampaignId</text>
+<text x="242.40000000000003" y="302" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:1:type" data-sx-role="label">string</text>
+<rect x="250.40000000000003" y="294" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="263.40000000000003" y="303" class="lt-erd-attr-marker">FK</text>
+<line x1="32" y1="313" x2="290.40000000000003" y2="313" class="lt-erd-row-divider"/>
+<text x="46" y="324" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:2:name" data-sx-role="label">ConvertedAccountId</text>
+<text x="242.40000000000003" y="324" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:2:type" data-sx-role="label">string</text>
+<rect x="250.40000000000003" y="316" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="263.40000000000003" y="325" class="lt-erd-attr-marker">FK</text>
+<line x1="32" y1="335" x2="290.40000000000003" y2="335" class="lt-erd-row-divider"/>
+<text x="46" y="346" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:3:name" data-sx-role="label">ConvertedContactId</text>
+<text x="242.40000000000003" y="346" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:3:type" data-sx-role="label">string</text>
+<rect x="250.40000000000003" y="338" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="263.40000000000003" y="347" class="lt-erd-attr-marker">FK</text>
+<line x1="32" y1="357" x2="290.40000000000003" y2="357" class="lt-erd-row-divider"/>
+<text x="46" y="368" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:4:name" data-sx-role="label">ConvertedOpportunityId</text>
+<text x="242.40000000000003" y="368" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:4:type" data-sx-role="label">string</text>
+<rect x="250.40000000000003" y="360" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="263.40000000000003" y="369" class="lt-erd-attr-marker">FK</text>
+<line x1="32" y1="379" x2="290.40000000000003" y2="379" class="lt-erd-row-divider"/>
+<text x="46" y="390" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:5:name" data-sx-role="label">Qualification_Result__c</text>
+<text x="272.40000000000003" y="390" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:5:type" data-sx-role="label">string</text>
+<line x1="32" y1="401" x2="290.40000000000003" y2="401" class="lt-erd-row-divider"/>
+<text x="46" y="412" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:6:name" data-sx-role="label">Disqualification_Reason__c</text>
+<text x="272.40000000000003" y="412" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:6:type" data-sx-role="label">string</text>
+<line x1="32" y1="423" x2="290.40000000000003" y2="423" class="lt-erd-row-divider"/>
+<text x="46" y="434" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:7:name" data-sx-role="label">Capacity__c</text>
+<text x="272.40000000000003" y="434" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:7:type" data-sx-role="label">string</text>
+<line x1="32" y1="445" x2="290.40000000000003" y2="445" class="lt-erd-row-divider"/>
+<text x="46" y="456" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:8:name" data-sx-role="label">Competition__c</text>
+<text x="272.40000000000003" y="456" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:8:type" data-sx-role="label">string</text>
+<line x1="32" y1="467" x2="290.40000000000003" y2="467" class="lt-erd-row-divider"/>
+<text x="46" y="478" class="lt-erd-attr-name" data-sx-key="node:LEAD:attr:9:name" data-sx-role="label">Decision_Structure__c</text>
+<text x="272.40000000000003" y="478" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:LEAD:attr:9:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CHANGE_REQUEST" data-sx-key="node:CHANGE_REQUEST" data-sx-owner="node:CHANGE_REQUEST" data-sx-interactive-position="move-x"><rect x="402.1500000000001" y="230" width="251.7" height="274" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 402.1500000000001 234 Q 402.1500000000001 230 406.1500000000001 230 L 649.8500000000001 230 Q 653.8500000000001 230 653.8500000000001 234 L 653.8500000000001 258 L 402.1500000000001 258 Z" class="lt-erd-entity-header-bg"/>
+<text x="528.0000000000001" y="244" class="lt-erd-entity-header">CHANGE_REQUEST</text>
+<text x="416.1500000000001" y="269" class="lt-erd-attr-name-pk" data-sx-key="node:CHANGE_REQUEST:attr:0:name" data-sx-role="label">Id</text>
+<text x="605.8500000000001" y="269" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:0:type" data-sx-role="label">string</text>
+<rect x="613.8500000000001" y="261" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="626.8500000000001" y="270" class="lt-erd-attr-marker">PK</text>
+<line x1="402.1500000000001" y1="280" x2="653.8500000000001" y2="280" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="291" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:1:name" data-sx-role="label">Contract__c</text>
+<text x="605.8500000000001" y="291" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:1:type" data-sx-role="label">string</text>
+<rect x="613.8500000000001" y="283" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="626.8500000000001" y="292" class="lt-erd-attr-marker">FK</text>
+<line x1="402.1500000000001" y1="302" x2="653.8500000000001" y2="302" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="313" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:2:name" data-sx-role="label">Scope_Type__c</text>
+<text x="635.8500000000001" y="313" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:2:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="324" x2="653.8500000000001" y2="324" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="335" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:3:name" data-sx-role="label">Cost_Impact__c</text>
+<text x="635.8500000000001" y="335" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:3:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="346" x2="653.8500000000001" y2="346" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="357" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:4:name" data-sx-role="label">Schedule_Impact_Days__c</text>
+<text x="635.8500000000001" y="357" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:4:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="368" x2="653.8500000000001" y2="368" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="379" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:5:name" data-sx-role="label">Technical_Impact__c</text>
+<text x="635.8500000000001" y="379" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:5:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="390" x2="653.8500000000001" y2="390" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="401" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:6:name" data-sx-role="label">Internal_Approved__c</text>
+<text x="635.8500000000001" y="401" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:6:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="412" x2="653.8500000000001" y2="412" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="423" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:7:name" data-sx-role="label">Customer_Approved__c</text>
+<text x="635.8500000000001" y="423" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:7:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="434" x2="653.8500000000001" y2="434" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="445" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:8:name" data-sx-role="label">Revision_No__c</text>
+<text x="635.8500000000001" y="445" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:8:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="456" x2="653.8500000000001" y2="456" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="467" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:9:name" data-sx-role="label">Revision_Approver__c</text>
+<text x="635.8500000000001" y="467" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:9:type" data-sx-role="label">string</text>
+<line x1="402.1500000000001" y1="478" x2="653.8500000000001" y2="478" class="lt-erd-row-divider"/>
+<text x="416.1500000000001" y="489" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST:attr:10:name" data-sx-role="label">Revision_Approved_Date__c</text>
+<text x="635.8500000000001" y="489" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST:attr:10:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="KNOWLEDGE_ARTICLE" data-sx-key="node:KNOWLEDGE_ARTICLE" data-sx-owner="node:KNOWLEDGE_ARTICLE" data-sx-interactive-position="move-x"><rect x="709.8500000000001" y="318" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 709.8500000000001 322 Q 709.8500000000001 318 713.8500000000001 318 L 885.8500000000001 318 Q 889.8500000000001 318 889.8500000000001 322 L 889.8500000000001 346 L 709.8500000000001 346 Z" class="lt-erd-entity-header-bg"/>
+<text x="799.8500000000001" y="332" class="lt-erd-entity-header">KNOWLEDGE_ARTICLE</text>
+<text x="723.8500000000001" y="357" class="lt-erd-attr-name-pk" data-sx-key="node:KNOWLEDGE_ARTICLE:attr:0:name" data-sx-role="label">Id</text>
+<text x="841.8500000000001" y="357" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:KNOWLEDGE_ARTICLE:attr:0:type" data-sx-role="label">string</text>
+<rect x="849.8500000000001" y="349" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="862.8500000000001" y="358" class="lt-erd-attr-marker">PK</text>
+<line x1="709.8500000000001" y1="368" x2="889.8500000000001" y2="368" class="lt-erd-row-divider"/>
+<text x="723.8500000000001" y="379" class="lt-erd-attr-name" data-sx-key="node:KNOWLEDGE_ARTICLE:attr:1:name" data-sx-role="label">Title</text>
+<text x="871.8500000000001" y="379" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:KNOWLEDGE_ARTICLE:attr:1:type" data-sx-role="label">string</text>
+<line x1="709.8500000000001" y1="390" x2="889.8500000000001" y2="390" class="lt-erd-row-divider"/>
+<text x="723.8500000000001" y="401" class="lt-erd-attr-name" data-sx-key="node:KNOWLEDGE_ARTICLE:attr:2:name" data-sx-role="label">PublishStatus</text>
+<text x="871.8500000000001" y="401" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:KNOWLEDGE_ARTICLE:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="ACCOUNT" data-sx-key="node:ACCOUNT" data-sx-owner="node:ACCOUNT" data-sx-interactive-position="move-x"><rect x="71.20000000000002" y="560" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 71.20000000000002 564 Q 71.20000000000002 560 75.20000000000002 560 L 247.20000000000002 560 Q 251.20000000000002 560 251.20000000000002 564 L 251.20000000000002 588 L 71.20000000000002 588 Z" class="lt-erd-entity-header-bg"/>
+<text x="161.20000000000002" y="574" class="lt-erd-entity-header">ACCOUNT</text>
+<text x="85.20000000000002" y="599" class="lt-erd-attr-name-pk" data-sx-key="node:ACCOUNT:attr:0:name" data-sx-role="label">Id</text>
+<text x="203.20000000000002" y="599" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ACCOUNT:attr:0:type" data-sx-role="label">string</text>
+<rect x="211.20000000000002" y="591" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="224.20000000000002" y="600" class="lt-erd-attr-marker">PK</text>
+<line x1="71.20000000000002" y1="610" x2="251.20000000000002" y2="610" class="lt-erd-row-divider"/>
+<text x="85.20000000000002" y="621" class="lt-erd-attr-name" data-sx-key="node:ACCOUNT:attr:1:name" data-sx-role="label">ParentId</text>
+<text x="203.20000000000002" y="621" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ACCOUNT:attr:1:type" data-sx-role="label">string</text>
+<rect x="211.20000000000002" y="613" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="224.20000000000002" y="622" class="lt-erd-attr-marker">FK</text>
+<line x1="71.20000000000002" y1="632" x2="251.20000000000002" y2="632" class="lt-erd-row-divider"/>
+<text x="85.20000000000002" y="643" class="lt-erd-attr-name" data-sx-key="node:ACCOUNT:attr:2:name" data-sx-role="label">Name</text>
+<text x="233.20000000000002" y="643" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ACCOUNT:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CONTACT" data-sx-key="node:CONTACT" data-sx-owner="node:CONTACT" data-sx-interactive-position="move-x"><rect x="71.20000000000002" y="813" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 71.20000000000002 817 Q 71.20000000000002 813 75.20000000000002 813 L 247.20000000000002 813 Q 251.20000000000002 813 251.20000000000002 817 L 251.20000000000002 841 L 71.20000000000002 841 Z" class="lt-erd-entity-header-bg"/>
+<text x="161.20000000000002" y="827" class="lt-erd-entity-header">CONTACT</text>
+<text x="85.20000000000002" y="852" class="lt-erd-attr-name-pk" data-sx-key="node:CONTACT:attr:0:name" data-sx-role="label">Id</text>
+<text x="203.20000000000002" y="852" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CONTACT:attr:0:type" data-sx-role="label">string</text>
+<rect x="211.20000000000002" y="844" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="224.20000000000002" y="853" class="lt-erd-attr-marker">PK</text>
+<line x1="71.20000000000002" y1="863" x2="251.20000000000002" y2="863" class="lt-erd-row-divider"/>
+<text x="85.20000000000002" y="874" class="lt-erd-attr-name" data-sx-key="node:CONTACT:attr:1:name" data-sx-role="label">AccountId</text>
+<text x="203.20000000000002" y="874" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CONTACT:attr:1:type" data-sx-role="label">string</text>
+<rect x="211.20000000000002" y="866" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="224.20000000000002" y="875" class="lt-erd-attr-marker">FK</text>
+<line x1="71.20000000000002" y1="885" x2="251.20000000000002" y2="885" class="lt-erd-row-divider"/>
+<text x="85.20000000000002" y="896" class="lt-erd-attr-name" data-sx-key="node:CONTACT:attr:2:name" data-sx-role="label">Name</text>
+<text x="233.20000000000002" y="896" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CONTACT:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="OPPORTUNITY" data-sx-key="node:OPPORTUNITY" data-sx-owner="node:OPPORTUNITY" data-sx-interactive-position="move-x"><rect x="307.20000000000005" y="714" width="265.1" height="296" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 307.20000000000005 718 Q 307.20000000000005 714 311.20000000000005 714 L 568.3000000000001 714 Q 572.3000000000001 714 572.3000000000001 718 L 572.3000000000001 742 L 307.20000000000005 742 Z" class="lt-erd-entity-header-bg"/>
+<text x="439.75000000000006" y="728" class="lt-erd-entity-header">OPPORTUNITY</text>
+<text x="321.20000000000005" y="753" class="lt-erd-attr-name-pk" data-sx-key="node:OPPORTUNITY:attr:0:name" data-sx-role="label">Id</text>
+<text x="524.3000000000001" y="753" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:0:type" data-sx-role="label">string</text>
+<rect x="532.3000000000001" y="745" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="545.3000000000001" y="754" class="lt-erd-attr-marker">PK</text>
+<line x1="307.20000000000005" y1="764" x2="572.3000000000001" y2="764" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="775" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:1:name" data-sx-role="label">AccountId</text>
+<text x="524.3000000000001" y="775" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:1:type" data-sx-role="label">string</text>
+<rect x="532.3000000000001" y="767" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="545.3000000000001" y="776" class="lt-erd-attr-marker">FK</text>
+<line x1="307.20000000000005" y1="786" x2="572.3000000000001" y2="786" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="797" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:2:name" data-sx-role="label">Project_Type__c</text>
+<text x="554.3000000000001" y="797" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:2:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="808" x2="572.3000000000001" y2="808" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="819" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:3:name" data-sx-role="label">Handoff_Status__c</text>
+<text x="554.3000000000001" y="819" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:3:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="830" x2="572.3000000000001" y2="830" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="841" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:4:name" data-sx-role="label">Internal_Approval_Status__c</text>
+<text x="554.3000000000001" y="841" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:4:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="852" x2="572.3000000000001" y2="852" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="863" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:5:name" data-sx-role="label">Capacity__c</text>
+<text x="554.3000000000001" y="863" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:5:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="874" x2="572.3000000000001" y2="874" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="885" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:6:name" data-sx-role="label">Competition__c</text>
+<text x="554.3000000000001" y="885" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:6:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="896" x2="572.3000000000001" y2="896" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="907" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:7:name" data-sx-role="label">Decision_Structure__c</text>
+<text x="554.3000000000001" y="907" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:7:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="918" x2="572.3000000000001" y2="918" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="929" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:8:name" data-sx-role="label">Expansion_Capacity__c</text>
+<text x="554.3000000000001" y="929" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:8:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="940" x2="572.3000000000001" y2="940" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="951" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:9:name" data-sx-role="label">Expansion_Timing__c</text>
+<text x="554.3000000000001" y="951" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:9:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="962" x2="572.3000000000001" y2="962" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="973" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:10:name" data-sx-role="label">Evidence_Link__c</text>
+<text x="554.3000000000001" y="973" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:10:type" data-sx-role="label">string</text>
+<line x1="307.20000000000005" y1="984" x2="572.3000000000001" y2="984" class="lt-erd-row-divider"/>
+<text x="321.20000000000005" y="995" class="lt-erd-attr-name" data-sx-key="node:OPPORTUNITY:attr:11:name" data-sx-role="label">Residual_Risk__c</text>
+<text x="554.3000000000001" y="995" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:OPPORTUNITY:attr:11:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="QUOTE" data-sx-key="node:QUOTE" data-sx-owner="node:QUOTE" data-sx-interactive-position="move-x"><rect x="340.70000000000005" y="1077" width="198.10000000000002" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 340.70000000000005 1081 Q 340.70000000000005 1077 344.70000000000005 1077 L 534.8000000000001 1077 Q 538.8000000000001 1077 538.8000000000001 1081 L 538.8000000000001 1105 L 340.70000000000005 1105 Z" class="lt-erd-entity-header-bg"/>
+<text x="439.75000000000006" y="1091" class="lt-erd-entity-header">QUOTE</text>
+<text x="354.70000000000005" y="1116" class="lt-erd-attr-name-pk" data-sx-key="node:QUOTE:attr:0:name" data-sx-role="label">Id</text>
+<text x="490.80000000000007" y="1116" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:QUOTE:attr:0:type" data-sx-role="label">string</text>
+<rect x="498.80000000000007" y="1108" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="511.80000000000007" y="1117" class="lt-erd-attr-marker">PK</text>
+<line x1="340.70000000000005" y1="1127" x2="538.8000000000001" y2="1127" class="lt-erd-row-divider"/>
+<text x="354.70000000000005" y="1138" class="lt-erd-attr-name" data-sx-key="node:QUOTE:attr:1:name" data-sx-role="label">OpportunityId</text>
+<text x="490.80000000000007" y="1138" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:QUOTE:attr:1:type" data-sx-role="label">string</text>
+<rect x="498.80000000000007" y="1130" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="511.80000000000007" y="1139" class="lt-erd-attr-marker">FK</text>
+<line x1="340.70000000000005" y1="1149" x2="538.8000000000001" y2="1149" class="lt-erd-row-divider"/>
+<text x="354.70000000000005" y="1160" class="lt-erd-attr-name" data-sx-key="node:QUOTE:attr:2:name" data-sx-role="label">Quote_Revision__c</text>
+<text x="520.8000000000001" y="1160" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:QUOTE:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CUSTOMER_COMMITMENT" data-sx-key="node:CUSTOMER_COMMITMENT" data-sx-owner="node:CUSTOMER_COMMITMENT" data-sx-interactive-position="move-x"><rect x="594.8000000000001" y="1066" width="204.8" height="120" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 594.8000000000001 1070 Q 594.8000000000001 1066 598.8000000000001 1066 L 795.6000000000001 1066 Q 799.6000000000001 1066 799.6000000000001 1070 L 799.6000000000001 1094 L 594.8000000000001 1094 Z" class="lt-erd-entity-header-bg"/>
+<text x="697.2" y="1080" class="lt-erd-entity-header">CUSTOMER_COMMITMENT</text>
+<text x="608.8000000000001" y="1105" class="lt-erd-attr-name-pk" data-sx-key="node:CUSTOMER_COMMITMENT:attr:0:name" data-sx-role="label">Id</text>
+<text x="751.6000000000001" y="1105" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_COMMITMENT:attr:0:type" data-sx-role="label">string</text>
+<rect x="759.6000000000001" y="1097" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="772.6000000000001" y="1106" class="lt-erd-attr-marker">PK</text>
+<line x1="594.8000000000001" y1="1116" x2="799.6000000000001" y2="1116" class="lt-erd-row-divider"/>
+<text x="608.8000000000001" y="1127" class="lt-erd-attr-name" data-sx-key="node:CUSTOMER_COMMITMENT:attr:1:name" data-sx-role="label">Opportunity__c</text>
+<text x="751.6000000000001" y="1127" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_COMMITMENT:attr:1:type" data-sx-role="label">string</text>
+<rect x="759.6000000000001" y="1119" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="772.6000000000001" y="1128" class="lt-erd-attr-marker">FK</text>
+<line x1="594.8000000000001" y1="1138" x2="799.6000000000001" y2="1138" class="lt-erd-row-divider"/>
+<text x="608.8000000000001" y="1149" class="lt-erd-attr-name" data-sx-key="node:CUSTOMER_COMMITMENT:attr:2:name" data-sx-role="label">Contract__c</text>
+<text x="751.6000000000001" y="1149" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_COMMITMENT:attr:2:type" data-sx-role="label">string</text>
+<rect x="759.6000000000001" y="1141" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="772.6000000000001" y="1150" class="lt-erd-attr-marker">FK</text>
+<line x1="594.8000000000001" y1="1160" x2="799.6000000000001" y2="1160" class="lt-erd-row-divider"/>
+<text x="608.8000000000001" y="1171" class="lt-erd-attr-name" data-sx-key="node:CUSTOMER_COMMITMENT:attr:3:name" data-sx-role="label">Approval_Status__c</text>
+<text x="781.6000000000001" y="1171" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_COMMITMENT:attr:3:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="TECHNICAL_REVIEW" data-sx-key="node:TECHNICAL_REVIEW" data-sx-owner="node:TECHNICAL_REVIEW" data-sx-interactive-position="move-x"><rect x="855.6000000000001" y="1088" width="196.4" height="76" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 855.6000000000001 1092 Q 855.6000000000001 1088 859.6000000000001 1088 L 1048.0000000000002 1088 Q 1052.0000000000002 1088 1052.0000000000002 1092 L 1052.0000000000002 1116 L 855.6000000000001 1116 Z" class="lt-erd-entity-header-bg"/>
+<text x="953.8000000000002" y="1102" class="lt-erd-entity-header">TECHNICAL_REVIEW</text>
+<text x="869.6000000000001" y="1127" class="lt-erd-attr-name-pk" data-sx-key="node:TECHNICAL_REVIEW:attr:0:name" data-sx-role="label">Id</text>
+<text x="1004.0000000000002" y="1127" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_REVIEW:attr:0:type" data-sx-role="label">string</text>
+<rect x="1012.0000000000002" y="1119" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1025.0000000000002" y="1128" class="lt-erd-attr-marker">PK</text>
+<line x1="855.6000000000001" y1="1138" x2="1052.0000000000002" y2="1138" class="lt-erd-row-divider"/>
+<text x="869.6000000000001" y="1149" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_REVIEW:attr:1:name" data-sx-role="label">Opportunity__c</text>
+<text x="1004.0000000000002" y="1149" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_REVIEW:attr:1:type" data-sx-role="label">string</text>
+<rect x="1012.0000000000002" y="1141" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1025.0000000000002" y="1150" class="lt-erd-attr-marker">FK</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="TECHNICAL_BASELINE" data-sx-key="node:TECHNICAL_BASELINE" data-sx-owner="node:TECHNICAL_BASELINE" data-sx-interactive-position="move-x"><rect x="314.75000000000006" y="1242" width="250.00000000000003" height="318" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 314.75000000000006 1246 Q 314.75000000000006 1242 318.75000000000006 1242 L 560.7500000000001 1242 Q 564.7500000000001 1242 564.7500000000001 1246 L 564.7500000000001 1270 L 314.75000000000006 1270 Z" class="lt-erd-entity-header-bg"/>
+<text x="439.75000000000006" y="1256" class="lt-erd-entity-header">TECHNICAL_BASELINE</text>
+<text x="328.75000000000006" y="1281" class="lt-erd-attr-name-pk" data-sx-key="node:TECHNICAL_BASELINE:attr:0:name" data-sx-role="label">Id</text>
+<text x="516.7500000000001" y="1281" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:0:type" data-sx-role="label">string</text>
+<rect x="524.7500000000001" y="1273" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="537.7500000000001" y="1282" class="lt-erd-attr-marker">PK</text>
+<line x1="314.75000000000006" y1="1292" x2="564.7500000000001" y2="1292" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1303" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:1:name" data-sx-role="label">Opportunity__c</text>
+<text x="516.7500000000001" y="1303" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:1:type" data-sx-role="label">string</text>
+<rect x="524.7500000000001" y="1295" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="537.7500000000001" y="1304" class="lt-erd-attr-marker">FK</text>
+<line x1="314.75000000000006" y1="1314" x2="564.7500000000001" y2="1314" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1325" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:2:name" data-sx-role="label">Quote__c</text>
+<text x="516.7500000000001" y="1325" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:2:type" data-sx-role="label">string</text>
+<rect x="524.7500000000001" y="1317" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="537.7500000000001" y="1326" class="lt-erd-attr-marker">FK</text>
+<line x1="314.75000000000006" y1="1336" x2="564.7500000000001" y2="1336" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1347" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:3:name" data-sx-role="label">Contract__c</text>
+<text x="516.7500000000001" y="1347" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:3:type" data-sx-role="label">string</text>
+<rect x="524.7500000000001" y="1339" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="537.7500000000001" y="1348" class="lt-erd-attr-marker">FK</text>
+<line x1="314.75000000000006" y1="1358" x2="564.7500000000001" y2="1358" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1369" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:4:name" data-sx-role="label">Customer_Commitment__c</text>
+<text x="516.7500000000001" y="1369" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:4:type" data-sx-role="label">string</text>
+<rect x="524.7500000000001" y="1361" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="537.7500000000001" y="1370" class="lt-erd-attr-marker">FK</text>
+<line x1="314.75000000000006" y1="1380" x2="564.7500000000001" y2="1380" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1391" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:5:name" data-sx-role="label">Version__c</text>
+<text x="546.7500000000001" y="1391" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:5:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1402" x2="564.7500000000001" y2="1402" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1413" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:6:name" data-sx-role="label">Approval_Status__c</text>
+<text x="546.7500000000001" y="1413" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:6:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1424" x2="564.7500000000001" y2="1424" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1435" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:7:name" data-sx-role="label">Approver__c</text>
+<text x="546.7500000000001" y="1435" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:7:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1446" x2="564.7500000000001" y2="1446" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1457" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:8:name" data-sx-role="label">Approved_Date__c</text>
+<text x="546.7500000000001" y="1457" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:8:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1468" x2="564.7500000000001" y2="1468" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1479" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:9:name" data-sx-role="label">ERP_Order_No__c</text>
+<text x="546.7500000000001" y="1479" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:9:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1490" x2="564.7500000000001" y2="1490" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1501" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:10:name" data-sx-role="label">ERP_Status__c</text>
+<text x="546.7500000000001" y="1501" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:10:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1512" x2="564.7500000000001" y2="1512" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1523" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:11:name" data-sx-role="label">ERP_Updated_At__c</text>
+<text x="546.7500000000001" y="1523" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:11:type" data-sx-role="label">string</text>
+<line x1="314.75000000000006" y1="1534" x2="564.7500000000001" y2="1534" class="lt-erd-row-divider"/>
+<text x="328.75000000000006" y="1545" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE:attr:12:name" data-sx-role="label">Handoff_Status__c</text>
+<text x="546.7500000000001" y="1545" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE:attr:12:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="TECHNICAL_BASELINE_SPEC" data-sx-key="node:TECHNICAL_BASELINE_SPEC" data-sx-owner="node:TECHNICAL_BASELINE_SPEC" data-sx-interactive-position="move-x"><rect x="318.1" y="1737" width="243.30000000000004" height="76" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 318.1 1741 Q 318.1 1737 322.1 1737 L 557.4000000000001 1737 Q 561.4000000000001 1737 561.4000000000001 1741 L 561.4000000000001 1765 L 318.1 1765 Z" class="lt-erd-entity-header-bg"/>
+<text x="439.75000000000006" y="1751" class="lt-erd-entity-header">TECHNICAL_BASELINE_SPEC</text>
+<text x="332.1" y="1776" class="lt-erd-attr-name-pk" data-sx-key="node:TECHNICAL_BASELINE_SPEC:attr:0:name" data-sx-role="label">Id</text>
+<text x="513.4000000000001" y="1776" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE_SPEC:attr:0:type" data-sx-role="label">string</text>
+<rect x="521.4000000000001" y="1768" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="534.4000000000001" y="1777" class="lt-erd-attr-marker">PK</text>
+<line x1="318.1" y1="1787" x2="561.4000000000001" y2="1787" class="lt-erd-row-divider"/>
+<text x="332.1" y="1798" class="lt-erd-attr-name" data-sx-key="node:TECHNICAL_BASELINE_SPEC:attr:1:name" data-sx-role="label">Technical_Baseline__c</text>
+<text x="513.4000000000001" y="1798" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:TECHNICAL_BASELINE_SPEC:attr:1:type" data-sx-role="label">string</text>
+<rect x="521.4000000000001" y="1790" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="534.4000000000001" y="1799" class="lt-erd-attr-marker">FK</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="ASSET" data-sx-key="node:ASSET" data-sx-owner="node:ASSET" data-sx-interactive-position="move-x"><rect x="617.4000000000001" y="1616" width="251.7" height="318" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 617.4000000000001 1620 Q 617.4000000000001 1616 621.4000000000001 1616 L 865.1000000000001 1616 Q 869.1000000000001 1616 869.1000000000001 1620 L 869.1000000000001 1644 L 617.4000000000001 1644 Z" class="lt-erd-entity-header-bg"/>
+<text x="743.2500000000001" y="1630" class="lt-erd-entity-header">ASSET</text>
+<text x="631.4000000000001" y="1655" class="lt-erd-attr-name-pk" data-sx-key="node:ASSET:attr:0:name" data-sx-role="label">Id</text>
+<text x="821.1000000000001" y="1655" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:0:type" data-sx-role="label">string</text>
+<rect x="829.1000000000001" y="1647" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="842.1000000000001" y="1656" class="lt-erd-attr-marker">PK</text>
+<line x1="617.4000000000001" y1="1666" x2="869.1000000000001" y2="1666" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1677" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:1:name" data-sx-role="label">AccountId</text>
+<text x="821.1000000000001" y="1677" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:1:type" data-sx-role="label">string</text>
+<rect x="829.1000000000001" y="1669" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="842.1000000000001" y="1678" class="lt-erd-attr-marker">FK</text>
+<line x1="617.4000000000001" y1="1688" x2="869.1000000000001" y2="1688" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1699" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:2:name" data-sx-role="label">Product2Id</text>
+<text x="821.1000000000001" y="1699" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:2:type" data-sx-role="label">string</text>
+<rect x="829.1000000000001" y="1691" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="842.1000000000001" y="1700" class="lt-erd-attr-marker">FK</text>
+<line x1="617.4000000000001" y1="1710" x2="869.1000000000001" y2="1710" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1721" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:3:name" data-sx-role="label">Applied_Revision__c</text>
+<text x="821.1000000000001" y="1721" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:3:type" data-sx-role="label">string</text>
+<rect x="829.1000000000001" y="1713" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="842.1000000000001" y="1722" class="lt-erd-attr-marker">FK</text>
+<line x1="617.4000000000001" y1="1732" x2="869.1000000000001" y2="1732" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1743" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:4:name" data-sx-role="label">Site_Location__c</text>
+<text x="851.1000000000001" y="1743" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:4:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1754" x2="869.1000000000001" y2="1754" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1765" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:5:name" data-sx-role="label">Warranty_Type__c</text>
+<text x="851.1000000000001" y="1765" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:5:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1776" x2="869.1000000000001" y2="1776" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1787" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:6:name" data-sx-role="label">Maintenance_Enabled__c</text>
+<text x="851.1000000000001" y="1787" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:6:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1798" x2="869.1000000000001" y2="1798" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1809" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:7:name" data-sx-role="label">Maintenance_Frequency__c</text>
+<text x="851.1000000000001" y="1809" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:7:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1820" x2="869.1000000000001" y2="1820" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1831" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:8:name" data-sx-role="label">Next_Inspection_Date__c</text>
+<text x="851.1000000000001" y="1831" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:8:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1842" x2="869.1000000000001" y2="1842" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1853" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:9:name" data-sx-role="label">Acceptance_Date__c</text>
+<text x="851.1000000000001" y="1853" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:9:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1864" x2="869.1000000000001" y2="1864" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1875" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:10:name" data-sx-role="label">Service_Ready_Status__c</text>
+<text x="851.1000000000001" y="1875" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:10:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1886" x2="869.1000000000001" y2="1886" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1897" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:11:name" data-sx-role="label">Service_Ready_Date__c</text>
+<text x="851.1000000000001" y="1897" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:11:type" data-sx-role="label">string</text>
+<line x1="617.4000000000001" y1="1908" x2="869.1000000000001" y2="1908" class="lt-erd-row-divider"/>
+<text x="631.4000000000001" y="1919" class="lt-erd-attr-name" data-sx-key="node:ASSET:attr:12:name" data-sx-role="label">Service_Ready_Acceptor__c</text>
+<text x="851.1000000000001" y="1919" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSET:attr:12:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="PROCESS_INSTANCE" data-sx-key="node:PROCESS_INSTANCE" data-sx-owner="node:PROCESS_INSTANCE" data-sx-interactive-position="move-x"><rect x="925.1000000000001" y="1726" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 925.1000000000001 1730 Q 925.1000000000001 1726 929.1000000000001 1726 L 1101.1000000000001 1726 Q 1105.1000000000001 1726 1105.1000000000001 1730 L 1105.1000000000001 1754 L 925.1000000000001 1754 Z" class="lt-erd-entity-header-bg"/>
+<text x="1015.1000000000001" y="1740" class="lt-erd-entity-header">PROCESS_INSTANCE</text>
+<text x="939.1000000000001" y="1765" class="lt-erd-attr-name-pk" data-sx-key="node:PROCESS_INSTANCE:attr:0:name" data-sx-role="label">Id</text>
+<text x="1057.1000000000001" y="1765" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROCESS_INSTANCE:attr:0:type" data-sx-role="label">string</text>
+<rect x="1065.1000000000001" y="1757" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1078.1000000000001" y="1766" class="lt-erd-attr-marker">PK</text>
+<line x1="925.1000000000001" y1="1776" x2="1105.1000000000001" y2="1776" class="lt-erd-row-divider"/>
+<text x="939.1000000000001" y="1787" class="lt-erd-attr-name" data-sx-key="node:PROCESS_INSTANCE:attr:1:name" data-sx-role="label">TargetObjectId</text>
+<text x="1087.1000000000001" y="1787" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROCESS_INSTANCE:attr:1:type" data-sx-role="label">string</text>
+<line x1="925.1000000000001" y1="1798" x2="1105.1000000000001" y2="1798" class="lt-erd-row-divider"/>
+<text x="939.1000000000001" y="1809" class="lt-erd-attr-name" data-sx-key="node:PROCESS_INSTANCE:attr:2:name" data-sx-role="label">Status</text>
+<text x="1087.1000000000001" y="1809" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:PROCESS_INSTANCE:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="ENTITLEMENT" data-sx-key="node:ENTITLEMENT" data-sx-owner="node:ENTITLEMENT" data-sx-interactive-position="move-x"><rect x="605.7250000000001" y="2001" width="236.6" height="120" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 605.7250000000001 2005 Q 605.7250000000001 2001 609.7250000000001 2001 L 838.3250000000002 2001 Q 842.3250000000002 2001 842.3250000000002 2005 L 842.3250000000002 2029 L 605.7250000000001 2029 Z" class="lt-erd-entity-header-bg"/>
+<text x="724.0250000000001" y="2015" class="lt-erd-entity-header">ENTITLEMENT</text>
+<text x="619.7250000000001" y="2040" class="lt-erd-attr-name-pk" data-sx-key="node:ENTITLEMENT:attr:0:name" data-sx-role="label">Id</text>
+<text x="794.3250000000002" y="2040" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT:attr:0:type" data-sx-role="label">string</text>
+<rect x="802.3250000000002" y="2032" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="815.3250000000002" y="2041" class="lt-erd-attr-marker">PK</text>
+<line x1="605.7250000000001" y1="2051" x2="842.3250000000002" y2="2051" class="lt-erd-row-divider"/>
+<text x="619.7250000000001" y="2062" class="lt-erd-attr-name" data-sx-key="node:ENTITLEMENT:attr:1:name" data-sx-role="label">AccountId</text>
+<text x="794.3250000000002" y="2062" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT:attr:1:type" data-sx-role="label">string</text>
+<rect x="802.3250000000002" y="2054" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="815.3250000000002" y="2063" class="lt-erd-attr-marker">FK</text>
+<line x1="605.7250000000001" y1="2073" x2="842.3250000000002" y2="2073" class="lt-erd-row-divider"/>
+<text x="619.7250000000001" y="2084" class="lt-erd-attr-name" data-sx-key="node:ENTITLEMENT:attr:2:name" data-sx-role="label">AssetId</text>
+<text x="794.3250000000002" y="2084" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT:attr:2:type" data-sx-role="label">string</text>
+<rect x="802.3250000000002" y="2076" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="815.3250000000002" y="2085" class="lt-erd-attr-marker">FK</text>
+<line x1="605.7250000000001" y1="2095" x2="842.3250000000002" y2="2095" class="lt-erd-row-divider"/>
+<text x="619.7250000000001" y="2106" class="lt-erd-attr-name" data-sx-key="node:ENTITLEMENT:attr:3:name" data-sx-role="label">EntitlementProcessId</text>
+<text x="794.3250000000002" y="2106" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ENTITLEMENT:attr:3:type" data-sx-role="label">string</text>
+<rect x="802.3250000000002" y="2098" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="815.3250000000002" y="2107" class="lt-erd-attr-marker">FK</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CUSTOMER_ALERT" data-sx-key="node:CUSTOMER_ALERT" data-sx-owner="node:CUSTOMER_ALERT" data-sx-interactive-position="move-x"><rect x="898.3250000000002" y="2001" width="180" height="120" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 898.3250000000002 2005 Q 898.3250000000002 2001 902.3250000000002 2001 L 1074.3250000000003 2001 Q 1078.3250000000003 2001 1078.3250000000003 2005 L 1078.3250000000003 2029 L 898.3250000000002 2029 Z" class="lt-erd-entity-header-bg"/>
+<text x="988.3250000000002" y="2015" class="lt-erd-entity-header">CUSTOMER_ALERT</text>
+<text x="912.3250000000002" y="2040" class="lt-erd-attr-name-pk" data-sx-key="node:CUSTOMER_ALERT:attr:0:name" data-sx-role="label">Id</text>
+<text x="1030.3250000000003" y="2040" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_ALERT:attr:0:type" data-sx-role="label">string</text>
+<rect x="1038.3250000000003" y="2032" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1051.3250000000003" y="2041" class="lt-erd-attr-marker">PK</text>
+<line x1="898.3250000000002" y1="2051" x2="1078.3250000000003" y2="2051" class="lt-erd-row-divider"/>
+<text x="912.3250000000002" y="2062" class="lt-erd-attr-name" data-sx-key="node:CUSTOMER_ALERT:attr:1:name" data-sx-role="label">Account__c</text>
+<text x="1030.3250000000003" y="2062" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_ALERT:attr:1:type" data-sx-role="label">string</text>
+<rect x="1038.3250000000003" y="2054" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1051.3250000000003" y="2063" class="lt-erd-attr-marker">FK</text>
+<line x1="898.3250000000002" y1="2073" x2="1078.3250000000003" y2="2073" class="lt-erd-row-divider"/>
+<text x="912.3250000000002" y="2084" class="lt-erd-attr-name" data-sx-key="node:CUSTOMER_ALERT:attr:2:name" data-sx-role="label">Asset__c</text>
+<text x="1030.3250000000003" y="2084" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_ALERT:attr:2:type" data-sx-role="label">string</text>
+<rect x="1038.3250000000003" y="2076" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1051.3250000000003" y="2085" class="lt-erd-attr-marker">FK</text>
+<line x1="898.3250000000002" y1="2095" x2="1078.3250000000003" y2="2095" class="lt-erd-row-divider"/>
+<text x="912.3250000000002" y="2106" class="lt-erd-attr-name" data-sx-key="node:CUSTOMER_ALERT:attr:3:name" data-sx-role="label">Status__c</text>
+<text x="1060.3250000000003" y="2106" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CUSTOMER_ALERT:attr:3:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CHANGE_REQUEST_RELATED_ITEM" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM" data-sx-owner="node:CHANGE_REQUEST_RELATED_ITEM" data-sx-interactive-position="move-x"><rect x="1134.3250000000003" y="1990" width="233.2" height="142" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 1134.3250000000003 1994 Q 1134.3250000000003 1990 1138.3250000000003 1990 L 1363.5250000000003 1990 Q 1367.5250000000003 1990 1367.5250000000003 1994 L 1367.5250000000003 2018 L 1134.3250000000003 2018 Z" class="lt-erd-entity-header-bg"/>
+<text x="1250.9250000000002" y="2004" class="lt-erd-entity-header">CHANGE_REQUEST_RELATED_ITEM</text>
+<text x="1148.3250000000003" y="2029" class="lt-erd-attr-name-pk" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:0:name" data-sx-role="label">Id</text>
+<text x="1319.5250000000003" y="2029" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:0:type" data-sx-role="label">string</text>
+<rect x="1327.5250000000003" y="2021" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1340.5250000000003" y="2030" class="lt-erd-attr-marker">PK</text>
+<line x1="1134.3250000000003" y1="2040" x2="1367.5250000000003" y2="2040" class="lt-erd-row-divider"/>
+<text x="1148.3250000000003" y="2051" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:1:name" data-sx-role="label">ChangeRequestId</text>
+<text x="1319.5250000000003" y="2051" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:1:type" data-sx-role="label">string</text>
+<rect x="1327.5250000000003" y="2043" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1340.5250000000003" y="2052" class="lt-erd-attr-marker">FK</text>
+<line x1="1134.3250000000003" y1="2062" x2="1367.5250000000003" y2="2062" class="lt-erd-row-divider"/>
+<text x="1148.3250000000003" y="2073" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:2:name" data-sx-role="label">RelatedItemId</text>
+<text x="1319.5250000000003" y="2073" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:2:type" data-sx-role="label">string</text>
+<rect x="1327.5250000000003" y="2065" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1340.5250000000003" y="2074" class="lt-erd-attr-marker">FK</text>
+<line x1="1134.3250000000003" y1="2084" x2="1367.5250000000003" y2="2084" class="lt-erd-row-divider"/>
+<text x="1148.3250000000003" y="2095" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:3:name" data-sx-role="label">Application_Status__c</text>
+<text x="1349.5250000000003" y="2095" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:3:type" data-sx-role="label">string</text>
+<line x1="1134.3250000000003" y1="2106" x2="1367.5250000000003" y2="2106" class="lt-erd-row-divider"/>
+<text x="1148.3250000000003" y="2117" class="lt-erd-attr-name" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:4:name" data-sx-role="label">Applied_Date__c</text>
+<text x="1349.5250000000003" y="2117" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CHANGE_REQUEST_RELATED_ITEM:attr:4:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="IOT_READING_EVENT" data-sx-key="node:IOT_READING_EVENT" data-sx-owner="node:IOT_READING_EVENT" data-sx-interactive-position="move-x"><rect x="1423.5250000000003" y="2012" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 1423.5250000000003 2016 Q 1423.5250000000003 2012 1427.5250000000003 2012 L 1599.5250000000003 2012 Q 1603.5250000000003 2012 1603.5250000000003 2016 L 1603.5250000000003 2040 L 1423.5250000000003 2040 Z" class="lt-erd-entity-header-bg"/>
+<text x="1513.5250000000003" y="2026" class="lt-erd-entity-header">IOT_READING_EVENT</text>
+<text x="1437.5250000000003" y="2051" class="lt-erd-attr-name" data-sx-key="node:IOT_READING_EVENT:attr:0:name" data-sx-role="label">ReplayId</text>
+<text x="1585.5250000000003" y="2051" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:IOT_READING_EVENT:attr:0:type" data-sx-role="label">string</text>
+<line x1="1423.5250000000003" y1="2062" x2="1603.5250000000003" y2="2062" class="lt-erd-row-divider"/>
+<text x="1437.5250000000003" y="2073" class="lt-erd-attr-name" data-sx-key="node:IOT_READING_EVENT:attr:1:name" data-sx-role="label">Asset_Key__c</text>
+<text x="1585.5250000000003" y="2073" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:IOT_READING_EVENT:attr:1:type" data-sx-role="label">string</text>
+<line x1="1423.5250000000003" y1="2084" x2="1603.5250000000003" y2="2084" class="lt-erd-row-divider"/>
+<text x="1437.5250000000003" y="2095" class="lt-erd-attr-name" data-sx-key="node:IOT_READING_EVENT:attr:2:name" data-sx-role="label">Trend_Flag__c</text>
+<text x="1585.5250000000003" y="2095" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:IOT_READING_EVENT:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="WORK_ORDER" data-sx-key="node:WORK_ORDER" data-sx-owner="node:WORK_ORDER" data-sx-interactive-position="move-x"><rect x="562.2000000000002" y="2188" width="285.2" height="406" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 562.2000000000002 2192 Q 562.2000000000002 2188 566.2000000000002 2188 L 843.4000000000001 2188 Q 847.4000000000001 2188 847.4000000000001 2192 L 847.4000000000001 2216 L 562.2000000000002 2216 Z" class="lt-erd-entity-header-bg"/>
+<text x="704.8000000000002" y="2202" class="lt-erd-entity-header">WORK_ORDER</text>
+<text x="576.2000000000002" y="2227" class="lt-erd-attr-name-pk" data-sx-key="node:WORK_ORDER:attr:0:name" data-sx-role="label">Id</text>
+<text x="799.4000000000001" y="2227" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:0:type" data-sx-role="label">string</text>
+<rect x="807.4000000000001" y="2219" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="820.4000000000001" y="2228" class="lt-erd-attr-marker">PK</text>
+<line x1="562.2000000000002" y1="2238" x2="847.4000000000001" y2="2238" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2249" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:1:name" data-sx-role="label">AssetId</text>
+<text x="799.4000000000001" y="2249" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:1:type" data-sx-role="label">string</text>
+<rect x="807.4000000000001" y="2241" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="820.4000000000001" y="2250" class="lt-erd-attr-marker">FK</text>
+<line x1="562.2000000000002" y1="2260" x2="847.4000000000001" y2="2260" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2271" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:2:name" data-sx-role="label">CaseId</text>
+<text x="799.4000000000001" y="2271" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:2:type" data-sx-role="label">string</text>
+<rect x="807.4000000000001" y="2263" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="820.4000000000001" y="2272" class="lt-erd-attr-marker">FK</text>
+<line x1="562.2000000000002" y1="2282" x2="847.4000000000001" y2="2282" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2293" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:3:name" data-sx-role="label">Problem__c</text>
+<text x="799.4000000000001" y="2293" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:3:type" data-sx-role="label">string</text>
+<rect x="807.4000000000001" y="2285" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="820.4000000000001" y="2294" class="lt-erd-attr-marker">FK</text>
+<line x1="562.2000000000002" y1="2304" x2="847.4000000000001" y2="2304" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2315" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:4:name" data-sx-role="label">Technical_Baseline__c</text>
+<text x="799.4000000000001" y="2315" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:4:type" data-sx-role="label">string</text>
+<rect x="807.4000000000001" y="2307" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="820.4000000000001" y="2316" class="lt-erd-attr-marker">FK</text>
+<line x1="562.2000000000002" y1="2326" x2="847.4000000000001" y2="2326" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2337" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:5:name" data-sx-role="label">Work_Subtype__c</text>
+<text x="829.4000000000001" y="2337" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:5:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2348" x2="847.4000000000001" y2="2348" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2359" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:6:name" data-sx-role="label">Acceptance_Type__c</text>
+<text x="829.4000000000001" y="2359" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:6:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2370" x2="847.4000000000001" y2="2370" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2381" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:7:name" data-sx-role="label">Acceptance_Condition__c</text>
+<text x="829.4000000000001" y="2381" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:7:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2392" x2="847.4000000000001" y2="2392" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2403" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:8:name" data-sx-role="label">Acceptance_Date__c</text>
+<text x="829.4000000000001" y="2403" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:8:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2414" x2="847.4000000000001" y2="2414" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2425" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:9:name" data-sx-role="label">Accepted_By_Contact__c</text>
+<text x="829.4000000000001" y="2425" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:9:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2436" x2="847.4000000000001" y2="2436" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2447" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:10:name" data-sx-role="label">Critical_Punch_Count__c</text>
+<text x="829.4000000000001" y="2447" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:10:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2458" x2="847.4000000000001" y2="2458" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2469" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:11:name" data-sx-role="label">Open_Punch_Count__c</text>
+<text x="829.4000000000001" y="2469" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:11:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2480" x2="847.4000000000001" y2="2480" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2491" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:12:name" data-sx-role="label">Root_Cause_Draft__c</text>
+<text x="829.4000000000001" y="2491" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:12:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2502" x2="847.4000000000001" y2="2502" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2513" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:13:name" data-sx-role="label">Repair_Result__c</text>
+<text x="829.4000000000001" y="2513" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:13:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2524" x2="847.4000000000001" y2="2524" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2535" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:14:name" data-sx-role="label">Action_Taken__c</text>
+<text x="829.4000000000001" y="2535" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:14:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2546" x2="847.4000000000001" y2="2546" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2557" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:15:name" data-sx-role="label">Recommended_Action__c</text>
+<text x="829.4000000000001" y="2557" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:15:type" data-sx-role="label">string</text>
+<line x1="562.2000000000002" y1="2568" x2="847.4000000000001" y2="2568" class="lt-erd-row-divider"/>
+<text x="576.2000000000002" y="2579" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER:attr:16:name" data-sx-role="label">Customer_Notification_Draft__c</text>
+<text x="829.4000000000001" y="2579" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER:attr:16:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CASE" data-sx-key="node:CASE" data-sx-owner="node:CASE" data-sx-interactive-position="move-x"><rect x="546.3000000000002" y="2650" width="317" height="296" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 546.3000000000002 2654 Q 546.3000000000002 2650 550.3000000000002 2650 L 859.3000000000002 2650 Q 863.3000000000002 2650 863.3000000000002 2654 L 863.3000000000002 2678 L 546.3000000000002 2678 Z" class="lt-erd-entity-header-bg"/>
+<text x="704.8000000000002" y="2664" class="lt-erd-entity-header">CASE</text>
+<text x="560.3000000000002" y="2689" class="lt-erd-attr-name-pk" data-sx-key="node:CASE:attr:0:name" data-sx-role="label">Id</text>
+<text x="815.3000000000002" y="2689" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:0:type" data-sx-role="label">string</text>
+<rect x="823.3000000000002" y="2681" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="836.3000000000002" y="2690" class="lt-erd-attr-marker">PK</text>
+<line x1="546.3000000000002" y1="2700" x2="863.3000000000002" y2="2700" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2711" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:1:name" data-sx-role="label">AccountId</text>
+<text x="815.3000000000002" y="2711" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:1:type" data-sx-role="label">string</text>
+<rect x="823.3000000000002" y="2703" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="836.3000000000002" y="2712" class="lt-erd-attr-marker">FK</text>
+<line x1="546.3000000000002" y1="2722" x2="863.3000000000002" y2="2722" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2733" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:2:name" data-sx-role="label">AssetId</text>
+<text x="815.3000000000002" y="2733" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:2:type" data-sx-role="label">string</text>
+<rect x="823.3000000000002" y="2725" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="836.3000000000002" y="2734" class="lt-erd-attr-marker">FK</text>
+<line x1="546.3000000000002" y1="2744" x2="863.3000000000002" y2="2744" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2755" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:3:name" data-sx-role="label">EntitlementId</text>
+<text x="815.3000000000002" y="2755" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:3:type" data-sx-role="label">string</text>
+<rect x="823.3000000000002" y="2747" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="836.3000000000002" y="2756" class="lt-erd-attr-marker">FK</text>
+<line x1="546.3000000000002" y1="2766" x2="863.3000000000002" y2="2766" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2777" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:4:name" data-sx-role="label">Problem__c</text>
+<text x="815.3000000000002" y="2777" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:4:type" data-sx-role="label">string</text>
+<rect x="823.3000000000002" y="2769" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="836.3000000000002" y="2778" class="lt-erd-attr-marker">FK</text>
+<line x1="546.3000000000002" y1="2788" x2="863.3000000000002" y2="2788" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2799" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:5:name" data-sx-role="label">Source_Maintenance_Work_Order__c</text>
+<text x="815.3000000000002" y="2799" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:5:type" data-sx-role="label">string</text>
+<rect x="823.3000000000002" y="2791" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="836.3000000000002" y="2800" class="lt-erd-attr-marker">FK</text>
+<line x1="546.3000000000002" y1="2810" x2="863.3000000000002" y2="2810" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2821" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:6:name" data-sx-role="label">Impact_Level__c</text>
+<text x="845.3000000000002" y="2821" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:6:type" data-sx-role="label">string</text>
+<line x1="546.3000000000002" y1="2832" x2="863.3000000000002" y2="2832" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2843" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:7:name" data-sx-role="label">Remote_Diagnosis__c</text>
+<text x="845.3000000000002" y="2843" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:7:type" data-sx-role="label">string</text>
+<line x1="546.3000000000002" y1="2854" x2="863.3000000000002" y2="2854" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2865" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:8:name" data-sx-role="label">Field_Visit_Required__c</text>
+<text x="845.3000000000002" y="2865" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:8:type" data-sx-role="label">string</text>
+<line x1="546.3000000000002" y1="2876" x2="863.3000000000002" y2="2876" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2887" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:9:name" data-sx-role="label">Coverage_Type__c</text>
+<text x="845.3000000000002" y="2887" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:9:type" data-sx-role="label">string</text>
+<line x1="546.3000000000002" y1="2898" x2="863.3000000000002" y2="2898" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2909" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:10:name" data-sx-role="label">Warranty_Decision__c</text>
+<text x="845.3000000000002" y="2909" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:10:type" data-sx-role="label">string</text>
+<line x1="546.3000000000002" y1="2920" x2="863.3000000000002" y2="2920" class="lt-erd-row-divider"/>
+<text x="560.3000000000002" y="2931" class="lt-erd-attr-name" data-sx-key="node:CASE:attr:11:name" data-sx-role="label">Warranty_Judged_At__c</text>
+<text x="845.3000000000002" y="2931" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE:attr:11:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="SERVICE_APPOINTMENT" data-sx-key="node:SERVICE_APPOINTMENT" data-sx-owner="node:SERVICE_APPOINTMENT" data-sx-interactive-position="move-x"><rect x="919.3000000000002" y="2749" width="180" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 919.3000000000002 2753 Q 919.3000000000002 2749 923.3000000000002 2749 L 1095.3000000000002 2749 Q 1099.3000000000002 2749 1099.3000000000002 2753 L 1099.3000000000002 2777 L 919.3000000000002 2777 Z" class="lt-erd-entity-header-bg"/>
+<text x="1009.3000000000002" y="2763" class="lt-erd-entity-header">SERVICE_APPOINTMENT</text>
+<text x="933.3000000000002" y="2788" class="lt-erd-attr-name-pk" data-sx-key="node:SERVICE_APPOINTMENT:attr:0:name" data-sx-role="label">Id</text>
+<text x="1051.3000000000002" y="2788" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:SERVICE_APPOINTMENT:attr:0:type" data-sx-role="label">string</text>
+<rect x="1059.3000000000002" y="2780" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1072.3000000000002" y="2789" class="lt-erd-attr-marker">PK</text>
+<line x1="919.3000000000002" y1="2799" x2="1099.3000000000002" y2="2799" class="lt-erd-row-divider"/>
+<text x="933.3000000000002" y="2810" class="lt-erd-attr-name" data-sx-key="node:SERVICE_APPOINTMENT:attr:1:name" data-sx-role="label">ParentRecordId</text>
+<text x="1081.3000000000002" y="2810" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:SERVICE_APPOINTMENT:attr:1:type" data-sx-role="label">string</text>
+<line x1="919.3000000000002" y1="2821" x2="1099.3000000000002" y2="2821" class="lt-erd-row-divider"/>
+<text x="933.3000000000002" y="2832" class="lt-erd-attr-name" data-sx-key="node:SERVICE_APPOINTMENT:attr:2:name" data-sx-role="label">Status</text>
+<text x="1081.3000000000002" y="2832" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:SERVICE_APPOINTMENT:attr:2:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="WORK_ORDER_LINE_ITEM" data-sx-key="node:WORK_ORDER_LINE_ITEM" data-sx-owner="node:WORK_ORDER_LINE_ITEM" data-sx-interactive-position="move-x"><rect x="589.0000000000002" y="3002" width="231.60000000000002" height="296" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 589.0000000000002 3006 Q 589.0000000000002 3002 593.0000000000002 3002 L 816.6000000000003 3002 Q 820.6000000000003 3002 820.6000000000003 3006 L 820.6000000000003 3030 L 589.0000000000002 3030 Z" class="lt-erd-entity-header-bg"/>
+<text x="704.8000000000002" y="3016" class="lt-erd-entity-header">WORK_ORDER_LINE_ITEM</text>
+<text x="603.0000000000002" y="3041" class="lt-erd-attr-name-pk" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:0:name" data-sx-role="label">Id</text>
+<text x="772.6000000000003" y="3041" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:0:type" data-sx-role="label">string</text>
+<rect x="780.6000000000003" y="3033" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="793.6000000000003" y="3042" class="lt-erd-attr-marker">PK</text>
+<line x1="589.0000000000002" y1="3052" x2="820.6000000000003" y2="3052" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3063" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:1:name" data-sx-role="label">WorkOrderId</text>
+<text x="772.6000000000003" y="3063" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:1:type" data-sx-role="label">string</text>
+<rect x="780.6000000000003" y="3055" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="793.6000000000003" y="3064" class="lt-erd-attr-marker">FK</text>
+<line x1="589.0000000000002" y1="3074" x2="820.6000000000003" y2="3074" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3085" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:2:name" data-sx-role="label">AssetId</text>
+<text x="772.6000000000003" y="3085" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:2:type" data-sx-role="label">string</text>
+<rect x="780.6000000000003" y="3077" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="793.6000000000003" y="3086" class="lt-erd-attr-marker">FK</text>
+<line x1="589.0000000000002" y1="3096" x2="820.6000000000003" y2="3096" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3107" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:3:name" data-sx-role="label">Parent_Line_Item__c</text>
+<text x="772.6000000000003" y="3107" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:3:type" data-sx-role="label">string</text>
+<rect x="780.6000000000003" y="3099" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="793.6000000000003" y="3108" class="lt-erd-attr-marker">FK</text>
+<line x1="589.0000000000002" y1="3118" x2="820.6000000000003" y2="3118" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3129" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:4:name" data-sx-role="label">Root_Line_Item__c</text>
+<text x="772.6000000000003" y="3129" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:4:type" data-sx-role="label">string</text>
+<rect x="780.6000000000003" y="3121" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="793.6000000000003" y="3130" class="lt-erd-attr-marker">FK</text>
+<line x1="589.0000000000002" y1="3140" x2="820.6000000000003" y2="3140" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3151" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:5:name" data-sx-role="label">Trend_Flag__c</text>
+<text x="802.6000000000003" y="3151" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:5:type" data-sx-role="label">string</text>
+<line x1="589.0000000000002" y1="3162" x2="820.6000000000003" y2="3162" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3173" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:6:name" data-sx-role="label">Drift_From_Baseline__c</text>
+<text x="802.6000000000003" y="3173" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:6:type" data-sx-role="label">string</text>
+<line x1="589.0000000000002" y1="3184" x2="820.6000000000003" y2="3184" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3195" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:7:name" data-sx-role="label">Delta_From_Previous__c</text>
+<text x="802.6000000000003" y="3195" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:7:type" data-sx-role="label">string</text>
+<line x1="589.0000000000002" y1="3206" x2="820.6000000000003" y2="3206" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3217" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:8:name" data-sx-role="label">Retest_Round__c</text>
+<text x="802.6000000000003" y="3217" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:8:type" data-sx-role="label">string</text>
+<line x1="589.0000000000002" y1="3228" x2="820.6000000000003" y2="3228" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3239" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:9:name" data-sx-role="label">Retest_Reason__c</text>
+<text x="802.6000000000003" y="3239" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:9:type" data-sx-role="label">string</text>
+<line x1="589.0000000000002" y1="3250" x2="820.6000000000003" y2="3250" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3261" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:10:name" data-sx-role="label">Line_Item_Role__c</text>
+<text x="802.6000000000003" y="3261" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:10:type" data-sx-role="label">string</text>
+<line x1="589.0000000000002" y1="3272" x2="820.6000000000003" y2="3272" class="lt-erd-row-divider"/>
+<text x="603.0000000000002" y="3283" class="lt-erd-attr-name" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:11:name" data-sx-role="label">Corrective_Action__c</text>
+<text x="802.6000000000003" y="3283" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:WORK_ORDER_LINE_ITEM:attr:11:type" data-sx-role="label">string</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="CASE_MILESTONE" data-sx-key="node:CASE_MILESTONE" data-sx-owner="node:CASE_MILESTONE" data-sx-interactive-position="move-x"><rect x="876.6000000000003" y="3101" width="203.1" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 876.6000000000003 3105 Q 876.6000000000003 3101 880.6000000000003 3101 L 1075.7000000000003 3101 Q 1079.7000000000003 3101 1079.7000000000003 3105 L 1079.7000000000003 3129 L 876.6000000000003 3129 Z" class="lt-erd-entity-header-bg"/>
+<text x="978.1500000000002" y="3115" class="lt-erd-entity-header">CASE_MILESTONE</text>
+<text x="890.6000000000003" y="3140" class="lt-erd-attr-name-pk" data-sx-key="node:CASE_MILESTONE:attr:0:name" data-sx-role="label">Id</text>
+<text x="1031.7000000000003" y="3140" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE_MILESTONE:attr:0:type" data-sx-role="label">string</text>
+<rect x="1039.7000000000003" y="3132" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1052.7000000000003" y="3141" class="lt-erd-attr-marker">PK</text>
+<line x1="876.6000000000003" y1="3151" x2="1079.7000000000003" y2="3151" class="lt-erd-row-divider"/>
+<text x="890.6000000000003" y="3162" class="lt-erd-attr-name" data-sx-key="node:CASE_MILESTONE:attr:1:name" data-sx-role="label">CaseId</text>
+<text x="1031.7000000000003" y="3162" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE_MILESTONE:attr:1:type" data-sx-role="label">string</text>
+<rect x="1039.7000000000003" y="3154" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1052.7000000000003" y="3163" class="lt-erd-attr-marker">FK</text>
+<line x1="876.6000000000003" y1="3173" x2="1079.7000000000003" y2="3173" class="lt-erd-row-divider"/>
+<text x="890.6000000000003" y="3184" class="lt-erd-attr-name" data-sx-key="node:CASE_MILESTONE:attr:2:name" data-sx-role="label">MilestoneTypeId</text>
+<text x="1031.7000000000003" y="3184" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:CASE_MILESTONE:attr:2:type" data-sx-role="label">string</text>
+<rect x="1039.7000000000003" y="3176" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1052.7000000000003" y="3185" class="lt-erd-attr-marker">FK</text></g>
+<g class="lt-erd-entity sx-interactive-movable" data-id="ASSIGNED_RESOURCE" data-sx-key="node:ASSIGNED_RESOURCE" data-sx-owner="node:ASSIGNED_RESOURCE" data-sx-interactive-position="move-x"><rect x="1135.7000000000003" y="3101" width="236.6" height="98" rx="4" class="lt-erd-entity-bg"/>
+<path d="M 1135.7000000000003 3105 Q 1135.7000000000003 3101 1139.7000000000003 3101 L 1368.3000000000002 3101 Q 1372.3000000000002 3101 1372.3000000000002 3105 L 1372.3000000000002 3129 L 1135.7000000000003 3129 Z" class="lt-erd-entity-header-bg"/>
+<text x="1254.0000000000002" y="3115" class="lt-erd-entity-header">ASSIGNED_RESOURCE</text>
+<text x="1149.7000000000003" y="3140" class="lt-erd-attr-name-pk" data-sx-key="node:ASSIGNED_RESOURCE:attr:0:name" data-sx-role="label">Id</text>
+<text x="1324.3000000000002" y="3140" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSIGNED_RESOURCE:attr:0:type" data-sx-role="label">string</text>
+<rect x="1332.3000000000002" y="3132" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-pk"/>
+<text x="1345.3000000000002" y="3141" class="lt-erd-attr-marker">PK</text>
+<line x1="1135.7000000000003" y1="3151" x2="1372.3000000000002" y2="3151" class="lt-erd-row-divider"/>
+<text x="1149.7000000000003" y="3162" class="lt-erd-attr-name" data-sx-key="node:ASSIGNED_RESOURCE:attr:1:name" data-sx-role="label">ServiceAppointmentId</text>
+<text x="1324.3000000000002" y="3162" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSIGNED_RESOURCE:attr:1:type" data-sx-role="label">string</text>
+<rect x="1332.3000000000002" y="3154" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1345.3000000000002" y="3163" class="lt-erd-attr-marker">FK</text>
+<line x1="1135.7000000000003" y1="3173" x2="1372.3000000000002" y2="3173" class="lt-erd-row-divider"/>
+<text x="1149.7000000000003" y="3184" class="lt-erd-attr-name" data-sx-key="node:ASSIGNED_RESOURCE:attr:2:name" data-sx-role="label">ServiceResourceId</text>
+<text x="1324.3000000000002" y="3184" class="lt-erd-attr-type" text-anchor="end" data-sx-key="node:ASSIGNED_RESOURCE:attr:2:type" data-sx-role="label">string</text>
+<rect x="1332.3000000000002" y="3176" width="26" height="16" rx="3" class="lt-erd-attr-marker-bg-fk"/>
+<text x="1345.3000000000002" y="3185" class="lt-erd-attr-marker">FK</text></g></g></svg>
