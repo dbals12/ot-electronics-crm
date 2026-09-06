@@ -156,15 +156,19 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 
 ## 8. 화면
 
-| 운영 개요 대시보드 | 상담사 콘솔 (MIAW) — Agent 이관 + AI 추천 응답 |
-|---|---|
-| ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![상담사 콘솔](./screenshots/03_상담사콘솔_MIAW_에이전트이관.png) |
+**상담사 콘솔 (MIAW) — Agent 대화 + AI 추천 응답**
 
-| 장비 상세 (게이지·이력) — 고객 포털 | 고객 포털 "내 자산" |
+| Agent 이관 + AI 추천 응답 카드 | Agent 컨텍스트 대화 + 보증·SLA 판정 |
 |---|---|
-| ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) | ![고객 포털](./screenshots/05_고객포털_내자산.png) |
+| ![AI 추천 응답](./screenshots/03_상담사콘솔_MIAW_에이전트이관.png) | ![Agent 대화](./screenshots/07_상담사콘솔_Agent대화_보증SLA판정.png) |
 
-전체: [`screenshots/`](./screenshots) — 운영 대시보드(Coolinx)·영업 홈 포함 6장
+**운영 · 포털**
+
+| 운영 개요 대시보드 | 장비 상세 (게이지·이력) — 고객 포털 |
+|---|---|
+| ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) |
+
+전체 7장: [`screenshots/`](./screenshots) — 고객 포털·영업 홈·작업주문 연동 포함
 
 ## 9. 이 저장소에 대해
 
