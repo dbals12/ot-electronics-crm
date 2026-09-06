@@ -1,0 +1,70 @@
+<template>
+    <div class="reply-card">
+        <div class="reply-card__head">
+            <div class="reply-card__title-row">
+                <span class="reply-card__icon" aria-hidden="true">
+                    <lightning-icon icon-name="utility:einstein" size="x-small" variant="inverse"></lightning-icon>
+                </span>
+                <div class="reply-card__title-block">
+                    <p class="reply-card__title">AI 추천 응답</p>
+                    <p class="reply-card__sub">대화 맥락과 자산 상태를 반영해 응답을 제안합니다</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reply-card__body">
+            <template lwc:if={isGenerating}>
+                <div class="center-state">
+                    <lightning-spinner alternative-text="생성 중" size="small"></lightning-spinner>
+                    <p class="state-text">대화 맥락을 분석하고 있습니다…</p>
+                </div>
+            </template>
+
+            <template lwc:elseif={hasReply}>
+                <div class="reply-context-chip">
+                    <lightning-icon icon-name="utility:info_alt" size="xx-small"
+                        class="context-icon"></lightning-icon>
+                    <span>{contextLabel}</span>
+                </div>
+                <div class="reply-bubble">
+                    <p class="reply-text">{replyText}</p>
+                </div>
+                <div class="reply-actions">
+                    <lightning-button label="다른 추천" variant="neutral"
+                        icon-name="utility:back" onclick={handleBack}></lightning-button>
+                    <lightning-button label={copyLabel} variant="brand"
+                        icon-name="utility:copy" onclick={handleCopy}></lightning-button>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="select-area">
+                    <p class="select-label">어떤 응답을 생성할까요?</p>
+                    <div class="custom-select" onclick={handleSelectToggle}>
+                        <span class={selectLabelClass}>{selectDisplayLabel}</span>
+                        <span class="custom-select__arrow" aria-hidden="true">▼</span>
+                        <template lwc:if={isDropdownOpen}>
+                            <ul class="custom-select__list" role="listbox">
+                                <template for:each={comboboxOptions} for:item="opt">
+                                    <li key={opt.value}
+                                        class={opt.liClass}
+                                        role="option"
+                                        data-value={opt.value}
+                                        onclick={handleOptionClick}>
+                                        {opt.label}
+                                    </li>
+                                </template>
+                            </ul>
+                        </template>
+                    </div>
+                    <div class="generate-row">
+                        <lightning-button label="추천 생성" variant="brand"
+                            onclick={handleGenerate}
+                            disabled={cannotGenerate}
+                            class="generate-btn"></lightning-button>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

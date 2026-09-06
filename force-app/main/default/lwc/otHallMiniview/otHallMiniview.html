@@ -1,0 +1,53 @@
+<template>
+    <div class="miniview">
+        <div class="miniview__head">
+            <span class="miniview__title">Hall 자산 상태 미니뷰</span>
+            <span class="miniview__summary">{summaryLine}</span>
+        </div>
+
+        <template lwc:if={isLoading}>
+            <lightning-spinner alternative-text="로딩 중" size="small"></lightning-spinner>
+        </template>
+
+        <template lwc:if={error}>
+            <div class="miniview__error" role="alert">{errorMessage}</div>
+        </template>
+
+        <template lwc:if={data}>
+            <template lwc:if={hasAssets}>
+                <div class="grid">
+                    <template for:each={cells} for:item="c">
+                        <div
+                            key={c.id}
+                            class={c.cls}
+                            style={c.style}
+                            data-id={c.id}
+                            role="button"
+                            tabindex="0"
+                            onclick={handleCellClick}
+                            title={c.name}
+                        >
+                            <span class={c.dotCls}></span>
+                            <span class="cell__name">{c.name}</span>
+                            <span class="cell__status">{c.statusLabel}</span>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="legend">
+                    <template for:each={legend} for:item="l">
+                        <span key={l.key} class="legend__item">
+                            <span class={l.cls}></span>{l.label}
+                        </span>
+                    </template>
+                </div>
+
+                <a class="miniview__link" href="#" onclick={handleViewAll}>모든 자산 보기 ›</a>
+            </template>
+
+            <template lwc:else>
+                <p class="miniview__empty">Hall 자산 데이터가 없습니다.</p>
+            </template>
+        </template>
+    </div>
+</template>

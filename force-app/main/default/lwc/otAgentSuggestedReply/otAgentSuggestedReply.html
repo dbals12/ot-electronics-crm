@@ -1,0 +1,69 @@
+<template>
+    <div class="card-wrapper">
+        <!-- Header -->
+        <div class="card-header" onclick={handleToggleCollapse}>
+            <div class="header-left">
+                <div class="einstein-icon">
+                    <lightning-icon icon-name="standard:einstein_replies" size="small"></lightning-icon>
+                </div>
+                <span class="header-title">AI 추천 응답</span>
+            </div>
+            <button class="collapse-btn">
+                <lightning-icon icon-name={collapseIcon} size="xx-small" alternative-text="접기"></lightning-icon>
+            </button>
+        </div>
+
+        <template if:false={isCollapsed}>
+            <div class="card-body">
+                <template if:true={noCaseLinked}>
+                    <div class="empty-state">
+                        Case가 연결되면 AI 추천이 활성화됩니다.
+                    </div>
+                </template>
+
+                <template if:false={noCaseLinked}>
+                    <!-- 버튼 영역 -->
+                    <template if:false={hasSuggestion}>
+                        <template if:false={isLoading}>
+                            <div class="btn-group">
+                                <button class="generate-btn" onclick={handleGenerate}>
+                                    AI 추천 생성
+                                </button>
+                                <button class="generate-btn closure" onclick={handleGenerateClosure}>
+                                    종결 카드 생성
+                                </button>
+                            </div>
+                        </template>
+                    </template>
+
+                    <!-- Loading -->
+                    <template if:true={isLoading}>
+                        <div class="loading-area">
+                            <lightning-spinner alternative-text="생성 중..." size="small"></lightning-spinner>
+                            <span class="loading-text">AI가 응답을 생성하고 있습니다...</span>
+                        </div>
+                    </template>
+
+                    <!-- Error -->
+                    <template if:true={error}>
+                        <div class="error-text">{error}</div>
+                    </template>
+
+                    <!-- Suggestion -->
+                    <template if:true={hasSuggestion}>
+                        <div class="suggestion-box">
+                            <div class="suggestion-label">추천 메시지</div>
+                            <div class="suggestion-text">{suggestion}</div>
+                        </div>
+
+                        <div class="action-row">
+                            <button class="action-btn primary" onclick={handleFill}>입력창에 채우기</button>
+                            <button class="action-btn secondary" onclick={handleGenerate}>다시 생성</button>
+                            <button class="action-btn secondary" onclick={handleClear}>지우기</button>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

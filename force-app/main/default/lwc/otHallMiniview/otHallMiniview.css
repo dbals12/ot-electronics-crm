@@ -1,0 +1,116 @@
+.miniview {
+    padding: 4px 2px 2px;
+}
+
+.miniview__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.miniview__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #16324f;
+}
+
+.miniview__summary {
+    font-size: 12px;
+    color: #5a6472;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    background: #0f2942;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    background: #16324f;
+    border: 1px solid #26456a;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    min-height: 64px;
+    transition: border-color 0.12s ease, transform 0.12s ease;
+}
+
+.cell:hover,
+.cell:focus {
+    transform: translateY(-1px);
+    outline: none;
+}
+
+.cell--normal:hover { border-color: #21aa42; }
+.cell--watch { border-color: #ff9f31; }
+.cell--critical { border-color: #ed4c4c; }
+.cell--unknown { opacity: 0.75; }
+
+.cell__name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #dbe6f2;
+}
+
+.cell__status {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #eaf1f8;
+}
+
+.cell--watch .cell__status { background: rgba(255, 159, 49, 0.22); color: #ffcf94; }
+.cell--critical .cell__status { background: rgba(237, 76, 76, 0.22); color: #ffb4b4; }
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot--normal { background: #21aa42; }
+.dot--watch { background: #ff9f31; }
+.dot--critical { background: #ed4c4c; }
+.dot--unknown { background: #a7b5c8; }
+
+.legend {
+    display: flex;
+    gap: 16px;
+    margin: 10px 2px 6px;
+}
+
+.legend__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #5a6472;
+}
+
+.miniview__link {
+    font-size: 12px;
+    color: #2f6fed;
+    text-decoration: none;
+}
+
+.miniview__error {
+    color: #c23934;
+    font-size: 13px;
+}
+
+.miniview__empty {
+    color: #7a8494;
+    font-size: 13px;
+    padding: 12px 0;
+}

@@ -1,0 +1,43 @@
+<template>
+    <div class="kpi-row">
+        <template lwc:if={isLoading}>
+            <lightning-spinner alternative-text="로딩 중" size="small"></lightning-spinner>
+        </template>
+
+        <template lwc:if={error}>
+            <div class="kpi-error" role="alert">{errorMessage}</div>
+        </template>
+
+        <template lwc:if={data}>
+            <template for:each={tiles} for:item="t">
+                <div
+                    key={t.key}
+                    class={t.cls}
+                    data-key={t.key}
+                    role="button"
+                    tabindex="0"
+                    onclick={handleTileClick}
+                >
+                    <div class="tile__head">
+                        <span class="tile__label">{t.label}</span>
+                    </div>
+                    <div class="tile__body">
+                        <span class="tile__value">{t.value}</span>
+                        <span class="tile__unit">{t.unit}</span>
+                        <svg class="tile__spark" viewBox={t.spark.viewBox} preserveAspectRatio="none">
+                            <polyline
+                                points={t.spark.points}
+                                fill="none"
+                                stroke={t.spark.color}
+                                stroke-width="1.5"
+                                stroke-linejoin="round"
+                                stroke-linecap="round"
+                            ></polyline>
+                        </svg>
+                    </div>
+                    <div class="tile__foot">{t.foot}</div>
+                </div>
+            </template>
+        </template>
+    </div>
+</template>

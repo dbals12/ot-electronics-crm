@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>운영 홈 KPI 행</masterLabel>
+    <description>Cooling Continuity "오늘" 탭 상단 KPI 4장 — SLA 위험/내 Case 큐/Agent 인계 대기/Critical Trend. 실 집계 + 스파크라인.</description>
+    <targets>
+        <target>lightning__HomePage</target>
+        <target>lightning__AppPage</target>
+    </targets>
+</LightningComponentBundle>

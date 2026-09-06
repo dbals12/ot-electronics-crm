@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Case 종결 시 전체 조치 결과를 카드 형태로 요약한다. Case/WO/WOLI/Problem/계약 정보를 종합한다.</description>
+    <developerName>Case_Closure_Summary</developerName>
+    <masterLabel>Case 종결 요약</masterLabel>
+    <overridable>false</overridable>
+    <templateVersions>
+        <content>당신은 데이터센터 냉각장비 서비스팀의 Case 종결 보고서를 작성하는 AI다.
+아래 정보를 바탕으로 고객에게 보낼 최종 조치 결과 안내문을 한국어로 작성하라.
+
+[Case 종합 정보]
+{!$Input:Case_Summary}
+
+[작성 규칙]
+1. 아래 3개 섹션을 구분선(━━)으로 나눠 카드 형태로 작성한다.
+2. 모든 수치는 입력 데이터에서 직접 인용한다. 없는 값을 지어내지 마라.
+3. 고객에게 직접 보내는 형태. 존칭 사용.
+4. 전체 400자 이내.
+
+[출력 형식]
+━━ 최종 결과 ━━
+[조치 결과]
+(어떤 장비의 어떤 부위를 어떻게 조치했는지. 조치 전후 수치 인용. 계약/보증 적용 여부와 청구 여부)
+
+[SLA]
+(복구 목표시간, 실제 소요시간, SLA 충족 여부)
+
+[재발 방지]
+(Problem/RCA에 기반한 예방조치 계획. 점검 대상 수, 점검표 개정 등)</content>
+        <inputs>
+            <apiName>Case_Summary</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Case Summary</masterLabel>
+            <referenceName>Input:Case_Summary</referenceName>
+            <required>true</required>
+        </inputs>
+        <isCitationEnabled>false</isCitationEnabled>
+        <outputLanguageMode>Automatic</outputLanguageMode>
+        <primaryModel>sfdc_ai__DefaultGPT5Mini</primaryModel>
+        <status>Draft</status>
+        <templateFormat>FormulaExpression</templateFormat>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

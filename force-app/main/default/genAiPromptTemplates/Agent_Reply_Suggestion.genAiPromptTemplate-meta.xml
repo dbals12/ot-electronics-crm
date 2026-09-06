@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>상담사가 고객에게 보낼 다음 응답 초안을 생성한다. Case 컨텍스트 + 대화 요약 + 현재 단계를 입력으로 받는다.</description>
+    <developerName>Agent_Reply_Suggestion</developerName>
+    <masterLabel>상담사 추천 응답</masterLabel>
+    <overridable>false</overridable>
+    <templateVersions>
+        <content>당신은 데이터센터 냉각장비 서비스 상담사를 보조하는 AI다.
+아래 정보를 바탕으로 상담사가 고객에게 보낼 다음 메시지 초안을 한국어로 작성하라.
+
+[Case 컨텍스트]
+{!$Input:Case_Context}
+
+[지금까지 대화 요약]
+{!$Input:Conversation_Summary}
+
+[현재 단계]
+{!$Input:Stage}
+
+[작성 규칙]
+1. 고객에게 직접 보내는 메시지 형태로 작성한다. 존칭을 쓰되 과도하지 않게.
+2. Case 컨텍스트에 있는 실제 수치(유량, 토크, 계약 상태, SLA 등)를 구체적으로 인용한다.
+3. 200자 이내로 간결하게 작성한다.
+4. 고객이 이미 알고 있는 내용을 반복하지 않는다.
+5. 단계에 맞는 행동을 안내한다:
+   - 상담사 인수: 이전 대화 내용 인수 확인 + 추가 확인 사항
+   - 계약·보증 확인: 계약/보증 유효 여부 + SLA + 다음 조치
+   - 출동 확정: 기사 도착 예정 + 고객 주의사항
+   - 조치 완료: 조치 내용 요약 + 결과 수치
+   - 복구 확인: 현재 상태 확인 요청
+   - 예방점검: 원인 분석 결과 + 추가 점검 계획
+   - Case 종결: 전체 요약 카드 형태
+6. 컨텍스트에 없는 정보를 지어내지 마라.</content>
+        <inputs>
+            <apiName>Case_Context</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Case Context</masterLabel>
+            <referenceName>Input:Case_Context</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Conversation_Summary</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Conversation Summary</masterLabel>
+            <referenceName>Input:Conversation_Summary</referenceName>
+            <required>false</required>
+        </inputs>
+        <inputs>
+            <apiName>Stage</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Stage</masterLabel>
+            <referenceName>Input:Stage</referenceName>
+            <required>false</required>
+        </inputs>
+        <isCitationEnabled>false</isCitationEnabled>
+        <outputLanguageMode>Automatic</outputLanguageMode>
+        <primaryModel>sfdc_ai__DefaultGPT5Mini</primaryModel>
+        <status>Draft</status>
+        <templateFormat>FormulaExpression</templateFormat>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

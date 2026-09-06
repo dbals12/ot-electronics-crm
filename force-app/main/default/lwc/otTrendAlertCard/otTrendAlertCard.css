@@ -1,0 +1,210 @@
+:host {
+    --ot-navy: #0b1f33;
+    --ot-blue: #5980a6;
+    --ot-cyan: #16b8c8;
+    --ot-light-blue: #94bce3;
+    --ot-deep-bg: #071724;
+    --ot-paper: #f2f2f3;
+    --ot-surface: #ffffff;
+    --ot-surface-subtle: #f8fafc;
+    --ot-border: #e9e9ea;
+    --ot-ink: #1d1f20;
+    --ot-muted: #5c6a72;
+    --ot-dim: #7f95a9;
+    --ot-success: #4caf50;
+    --ot-success-light: #81c784;
+    --ot-warning: #f57c00;
+    --ot-critical: #d32f2f;
+    --ot-font-sans: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Apple SD Gothic Neo", sans-serif;
+    --ot-font-mono: "JetBrains Mono", Pretendard, monospace;
+    --ot-radius-sm: 4px;
+    --ot-radius-md: 6px;
+    --ot-shadow-card: 0 1px 2px rgba(11, 31, 51, 0.08);
+    --ot-focus-ring: 0 0 0 3px rgba(22, 184, 200, 0.28);
+    display: block;
+    font-family: var(--ot-font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ot-ink);
+}
+
+.card {
+    background: var(--ot-surface);
+    border: 1px solid var(--ot-border);
+    border-radius: var(--ot-radius-md);
+    overflow: hidden;
+    max-width: 360px;
+    box-shadow: var(--ot-shadow-card);
+}
+
+.asset-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    background: var(--ot-paper);
+}
+
+.body {
+    padding: 16px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ot-navy);
+}
+
+.st {
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ok {
+    color: var(--ot-success);
+}
+
+.warn {
+    color: var(--ot-warning);
+}
+
+.sub {
+    color: var(--ot-muted);
+    font-size: 12.5px;
+    margin-top: 4px;
+}
+
+.critical-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(211, 47, 47, 0.08);
+    border-bottom: 1px solid rgba(211, 47, 47, 0.2);
+    color: var(--ot-critical);
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+.banner-dismiss {
+    background: none;
+    border: none;
+    color: var(--ot-critical);
+    font-size: 11.5px;
+    text-decoration: underline;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.gauge-panel {
+    margin-top: 14px;
+    background: var(--ot-deep-bg);
+    border-radius: var(--ot-radius-md);
+    padding: 12px;
+}
+
+.gauge-panel-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ot-light-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.gauge-panel-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ot-success-light);
+    box-shadow: 0 0 6px var(--ot-success-light);
+}
+
+.gauge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gauge-empty {
+    margin-top: 14px;
+    padding: 18px 10px;
+    text-align: center;
+    border: 1px dashed var(--ot-border);
+    border-radius: var(--ot-radius-md);
+    color: var(--ot-muted);
+    font-size: 12px;
+}
+
+.facts {
+    margin: 14px 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 10px;
+    font-size: 12.5px;
+}
+
+.facts dt {
+    color: var(--ot-muted);
+}
+
+.facts dd {
+    margin: 0;
+    text-align: right;
+    font-weight: 600;
+}
+
+.agent-entry {
+    margin-top: 14px;
+}
+
+.agent-btn {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--ot-navy);
+    border-radius: var(--ot-radius-md);
+    background: var(--ot-surface);
+    color: var(--ot-navy);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.agent-btn:hover {
+    background: var(--ot-navy);
+    color: var(--ot-surface);
+}
+
+
+.agent-btn:focus {
+    outline: none;
+    box-shadow: var(--ot-focus-ring);
+}
+
+.loading,
+.empty,
+.error {
+    padding: 16px;
+    font-size: 13.5px;
+    color: var(--ot-muted);
+    text-align: center;
+}
+
+.error {
+    color: var(--ot-critical);
+    text-align: left;
+}
