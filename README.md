@@ -155,7 +155,7 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 
 | 운영 개요 대시보드 | 데이터센터 3D 디지털 트윈 |
 |---|---|
-| ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![3D 열지도](./screenshots/03_데이터센터_3D_열지도.png) |
+| ![운영 개요](./screenshots/01_운영개요_대시보드.png) |
 
 | 장비 상세 (게이지·이력) | 고객 포털 "내 자산" |
 |---|---|
