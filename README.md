@@ -107,8 +107,9 @@ Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision 
 | MIAW 실시간 채팅 | `messagingChannels/OT_Service_Chat` + `EmbeddedServiceConfig` + `Route_Inbound_to_Agent` / `Route_to_Messaging_Queue` Flow + `Messaging_Session_Pinned/Record_Page` FlexiPage + `otMsSidebarLeft`·`otMsSidebarCenter`·`otMsConvBanner`·`otCaseSubtabOpener` — MessagingSession 좌측 고정 + Case 서브탭 자동 오픈, 1차 Agent → 2차 상담사 **같은 대화 이어받기** |
 | Slack 협업 · FSM | 담당자 확정 → Slack Swarm 채널 자동 생성·초대·요약, FSM 모바일 배정 연동 + SA/WO 상태 동기화 |
 | 운영 홈 | `OTOpsHomeController` + `otCooling*` / `coolinxOverview` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC(`t5GaugeSvg`·`t5HmiScaleGauge`) — 운영 KPI·장비 상태·유량 추세·에너지 사용량 |
-| RCA 워크벤치 | `otCoolingRca` — Problem 레코드에서 **직접 원인 vs 조직 근본 원인**, **특수 조건(시정) vs 12대 공통 조건(예방)** 분리 판정 → 동종 장비 예방점검 WO 일괄 생성 + 점검표 개정(Rev.2→Rev.3) |
 | 영업(Opportunity) 홈 | `OtSalesDashboardController` / `OtSalesSidebarController` + `dashboards/OT_Sales_Dashboard` + `reports/OT_Sales/` 4종(Pipeline_By_Stage·Key_Deals·Quarterly) + `otSales*` LWC 15종 — 분기 실적·파이프라인·서비스계약 만료 관리 |
+
+> §2 데모 시나리오의 **원인 분석(RCA) 워크벤치·출동 브리핑·Customer 360**은 T4 트랙(다른 팀원) 작업입니다. 이 저장소에는 포함되지 않습니다.
 
 ## 4. 핵심 의사결정
 
@@ -159,15 +160,11 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 |---|---|
 | ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![상담사 콘솔](./screenshots/03_상담사콘솔_MIAW_에이전트이관.png) |
 
-| 장비 상세 (게이지·이력) — 고객 포털 | RCA 워크벤치 — 원인 분석 |
+| 장비 상세 (게이지·이력) — 고객 포털 | 고객 포털 "내 자산" |
 |---|---|
-| ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) | ![RCA 원인분석](./screenshots/07_RCA_원인분석.png) |
+| ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) | ![고객 포털](./screenshots/05_고객포털_내자산.png) |
 
-| 고객 포털 "내 자산" | RCA 시정·예방 — 동종 장비 12대 일괄 예방 |
-|---|---|
-| ![고객 포털](./screenshots/05_고객포털_내자산.png) | ![RCA 시정예방](./screenshots/08_RCA_시정예방_동종장비.png) |
-
-전체 8장: [`screenshots/`](./screenshots)
+전체: [`screenshots/`](./screenshots) — 운영 대시보드(Coolinx)·영업 홈 포함 6장
 
 ## 9. 이 저장소에 대해
 
