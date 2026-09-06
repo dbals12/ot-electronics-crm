@@ -168,7 +168,7 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 |---|---|
 | ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) |
 
-전체 7장: [`screenshots/`](./screenshots) — 고객 포털·영업 홈·작업주문 연동 포함
+전체 6장: [`screenshots/`](./screenshots) — 운영 대시보드·영업 홈·작업주문 연동 포함
 
 ## 9. 이 저장소에 대해
 
