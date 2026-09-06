@@ -28,6 +28,12 @@ OT전자는 데이터센터에 들어가는 **냉각장비(CDU·냉각분배장�
 
 리드 → 영업 → 계약 → **설계 기준선 → 생산·설치 → 시운전 → 인수(조건부→최종) → 보증 개시** → 운영(예방정비·장애복구) → 재영업(증설)의 전체 여정을 **하나의 데이터 체인**으로 잇는 것.
 
+### 시스템 아키텍처 (직접 설계)
+
+![시스템 아키텍처](./docs/diagrams/01_시스템_아키텍처.png)
+
+Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision / Process Hub)으로 구조화하고, `Asset`을 E2E 기준점으로 잡았습니다. 외부 시스템(PLM·ERP·BMS/DCCM)은 이번 범위에서 필드만 두고 실연동은 트리거 조건으로 미뤘습니다(§4-③). ERD는 [`docs/diagrams/`](./docs/diagrams) 참고.
+
 ### 팀 구성 — "누가 어떤 객체를 소유하는가"로 트랙 분리
 
 업무(Use Case)가 아니라 **객체 소유권**으로 5개 트랙을 나눴습니다. 하나의 업무 흐름이 여러 객체를 가로지르기 때문에, UC로 나누면 여러 사람이 같은 객체를 건드리게 되기 때문입니다.
@@ -71,6 +77,12 @@ OT전자는 데이터센터에 들어가는 **냉각장비(CDU·냉각분배장�
 
 - **T3 (단독)** — 계약 확정 이후 "설계 기준선 → 시운전/인수 → 보증 개시"의 **데이터 체인과 결정적 자동화** 전부. Flow 23개가 이 구간의 뼈대입니다.
 - **T5 (주도)** — 발표 범위 밖에서 운영 단계의 "가상 IoT → 조기경보 → 협업 → AI 상담 → 현장 → 재영업" 통합 루프를 ADR로 설계하고, 이후 팀 분업(트랙 A~E 백로그·주말 분업표)으로 확장. Apex 19 · LWC 48.
+
+아래 ERD가 제 담당 구간입니다 — Technical Baseline · WorkOrder · WOLI(`Trend_Flag__c` / `Drift_From_Baseline__c`) · IoT_Reading_Event · Customer_Alert · Case · Entitlement (직접 설계):
+
+![설치·인수·운영·재영업 상세 ERD](./docs/diagrams/04_설치인수운영_상세_ERD.png)
+
+[전체 여정 Object ERD →](./docs/diagrams/03_전체여정_Object_ERD.svg)
 
 ### T3 — 구축·인수 트랙 (단독)
 
@@ -136,6 +148,7 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 - [T3 학습정리](./docs/T3_학습정리.md) — Flow/도메인 노하우
 - [T5 시스템 아키텍처 총정리](./docs/T5_시스템아키텍처.md) · [통합 Service Agent 구조](./docs/T5_통합_Service_Agent_구조.md) · [실시간 알림 구조](./docs/T5_실시간알림_구조.md)
 - [ADR-T5-00 통합 루프 MVP](./docs/ADR-T5-00-integrated-loop.md) · [T5 A~E 스펙](./docs/specs)
+- [다이어그램 (시스템 아키텍처 · ERD, 직접 설계)](./docs/diagrams)
 
 ## 8. 화면
 
