@@ -106,7 +106,7 @@ Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision 
 | AI 자동 응답 추천 | `T5AgentReplySuggestionAction` + `Agent_Reply_Suggestion` 프롬프트 템플릿 + `otAgentSuggestedReply` / `t5ServiceReplies` — 상담사가 답변 초안을 한 번 더 검증해 발송 |
 | MIAW 실시간 채팅 | `messagingChannels/OT_Service_Chat` + `EmbeddedServiceConfig` + `Route_Inbound_to_Agent` / `Route_to_Messaging_Queue` Flow + `Messaging_Session_Pinned/Record_Page` FlexiPage + `otMsSidebarLeft`·`otMsSidebarCenter`·`otMsConvBanner`·`otCaseSubtabOpener` — MessagingSession 좌측 고정 + Case 서브탭 자동 오픈, 1차 Agent → 2차 상담사 **같은 대화 이어받기** |
 | Slack 협업 · FSM | 담당자 확정 → Slack Swarm 채널 자동 생성·초대·요약, FSM 모바일 배정 연동 + SA/WO 상태 동기화 |
-| 운영 홈 | `OTOpsHomeController` + `otCooling*` / `coolinxOverview` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC(`t5GaugeSvg`·`t5HmiScaleGauge`) — 운영 KPI·장비 상태·유량 추세·에너지 사용량 |
+| 운영 홈 | `OTOpsHomeController` + `otCooling*` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC(`t5GaugeSvg`·`t5HmiScaleGauge`) — 운영 KPI·장비 상태·유량 추세·에너지 사용량 |
 | 영업(Opportunity) 홈 | `OtSalesDashboardController` / `OtSalesSidebarController` + `dashboards/OT_Sales_Dashboard` + `reports/OT_Sales/` 4종(Pipeline_By_Stage·Key_Deals·Quarterly) + `otSales*` LWC 15종 — 분기 실적·파이프라인·서비스계약 만료 관리 |
 
 > §2 데모 시나리오의 **원인 분석(RCA) 워크벤치·출동 브리핑·Customer 360**은 T4 트랙(다른 팀원) 작업입니다. 이 저장소에는 포함되지 않습니다.
