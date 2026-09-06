@@ -75,7 +75,8 @@ Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision 
 ```
 
 - **T3 (단독)** — 계약 확정 이후 "설계 기준선 → 시운전/인수 → 보증 개시"의 **데이터 체인과 결정적 자동화** 전부. Flow 23개가 이 구간의 뼈대입니다.
-- **T5 (주도)** — 발표 범위 밖에서 운영 단계의 "가상 IoT → 조기경보 → 협업 → AI 상담 → 현장 → 재영업" 통합 루프를 ADR로 설계하고, 이후 팀 분업(트랙 A~E 백로그·주말 분업표)으로 확장. Apex 19 · LWC 48.
+- **T5 (주도)** — 발표 범위 밖에서 운영 단계의 "가상 IoT → 조기경보 → 협업 → AI 상담 → 현장 → 재영업" 통합 루프를 ADR로 설계하고, 이후 3~4인 팀 분업(트랙 A~E 백로그·주말 분업표 작성)으로 확장했습니다.
+  → **아래 T5 표는 분업 이후 제가 직접 구현·커밋한 컴포넌트**입니다 (`git author` 기준 추출 — 다른 트랙 담당자가 만든 것은 이 저장소에 없음). Apex 19 · LWC 48.
 
 아래 ERD가 제 담당 구간입니다 — Technical Baseline · WorkOrder · WOLI(`Trend_Flag__c` / `Drift_From_Baseline__c`) · IoT_Reading_Event · Customer_Alert · Case · Entitlement (직접 설계):
 
@@ -105,7 +106,8 @@ Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision 
 | AI 자동 응답 추천 | `T5AgentReplySuggestionAction` + `Agent_Reply_Suggestion` 프롬프트 템플릿 + `otAgentSuggestedReply` / `t5ServiceReplies` — 상담사가 답변 초안을 한 번 더 검증해 발송 |
 | MIAW 실시간 채팅 | `messagingChannels/OT_Service_Chat` + `EmbeddedServiceConfig` + `Route_Inbound_to_Agent` / `Route_to_Messaging_Queue` Flow + `Messaging_Session_Pinned/Record_Page` FlexiPage + `otMsSidebarLeft`·`otMsSidebarCenter`·`otMsConvBanner`·`otCaseSubtabOpener` — MessagingSession 좌측 고정 + Case 서브탭 자동 오픈, 1차 Agent → 2차 상담사 **같은 대화 이어받기** |
 | Slack 협업 · FSM | 담당자 확정 → Slack Swarm 채널 자동 생성·초대·요약, FSM 모바일 배정 연동 + SA/WO 상태 동기화 |
-| 운영 홈 | `OTOpsHomeController` + `otCooling*` / `coolinxOverview` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC — 데이터센터 3D 디지털 트윈·KPI·유량 추세 |
+| 운영 홈 | `OTOpsHomeController` + `otCooling*` / `coolinxOverview` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC(`t5GaugeSvg`·`t5HmiScaleGauge`) — 운영 KPI·장비 상태·유량 추세·에너지 사용량 |
+| RCA 워크벤치 | `otCoolingRca` — Problem 레코드에서 **직접 원인 vs 조직 근본 원인**, **특수 조건(시정) vs 12대 공통 조건(예방)** 분리 판정 → 동종 장비 예방점검 WO 일괄 생성 + 점검표 개정(Rev.2→Rev.3) |
 | 영업(Opportunity) 홈 | `OtSalesDashboardController` / `OtSalesSidebarController` + `dashboards/OT_Sales_Dashboard` + `reports/OT_Sales/` 4종(Pipeline_By_Stage·Key_Deals·Quarterly) + `otSales*` LWC 15종 — 분기 실적·파이프라인·서비스계약 만료 관리 |
 
 ## 4. 핵심 의사결정
@@ -153,15 +155,19 @@ Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actio
 
 ## 8. 화면
 
-| 운영 개요 대시보드 | 데이터센터 3D 디지털 트윈 |
+| 운영 개요 대시보드 | 상담사 콘솔 (MIAW) — Agent 이관 + AI 추천 응답 |
 |---|---|
-| ![운영 개요](./screenshots/01_운영개요_대시보드.png) |
+| ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![상담사 콘솔](./screenshots/03_상담사콘솔_MIAW_에이전트이관.png) |
 
-| 장비 상세 (게이지·이력) | 고객 포털 "내 자산" |
+| 장비 상세 (게이지·이력) — 고객 포털 | RCA 워크벤치 — 원인 분석 |
 |---|---|
-| ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) | ![고객 포털](./screenshots/05_고객포털_내자산.png) |
+| ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) | ![RCA 원인분석](./screenshots/07_RCA_원인분석.png) |
 
-전체: [`screenshots/`](./screenshots) · 상담사 콘솔(MIAW)·Agent 상담·RCA 워크벤치는 데모 영상 예정.
+| 고객 포털 "내 자산" | RCA 시정·예방 — 동종 장비 12대 일괄 예방 |
+|---|---|
+| ![고객 포털](./screenshots/05_고객포털_내자산.png) | ![RCA 시정예방](./screenshots/08_RCA_시정예방_동종장비.png) |
+
+전체 8장: [`screenshots/`](./screenshots)
 
 ## 9. 이 저장소에 대해
 
