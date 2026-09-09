@@ -3,7 +3,7 @@
 > AI 데이터센터용 냉각장비를 **제조 → 설치 → 인수 → 운영 → 재영업**하는 가상 기업 **OT전자**의
 > 리드부터 사후 운영까지를 잇는 Salesforce End-to-End CRM.
 >
-> **6주 · 5인 팀 부트캠프 프로젝트** (AI CRM 2기). 저는 **구축·인수(T3) 트랙을 담당**했고, **AI 운영 고도화(T5) 이니셔티브를 주도**했습니다.
+> **6주 · 5인 팀 부트캠프 프로젝트** (AI CRM 2기). 저는 **설치·시운전·인수·보증 자동화를 담당**했고, 이후 **장비 조기경보·고객 포털·AI 상담을 잇는 운영 고도화**를 주도했습니다.
 >
 > 이 저장소는 팀 저장소(`sf-team-1to10/ot-cooling-crm`, 비공개)에서 **제가 작성·설계한 컴포넌트만** 추출한 것입니다. (→ [CONTRIBUTIONS.md](./CONTRIBUTIONS.md)) 전체 프로젝트의 맥락 안에서 제 기여가 어디에 위치하는지 아래에 정리했습니다.
 
@@ -145,6 +145,8 @@ Platform Event · Custom Metadata Type · Agentforce (Topic / Action) · Experie
 Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actions CI
 
 **협업 도구**: Agentforce Vibes · Claude Code — AI 페어링으로 트랙 단독 구축. 설계·의사결정·검증은 직접.
+
+**검증**: Apex 테스트 클래스 8개를 포함합니다.
 
 ## 7. 문서
 
