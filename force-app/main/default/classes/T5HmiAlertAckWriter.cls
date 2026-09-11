@@ -17,10 +17,10 @@
  */
 public without sharing class T5HmiAlertAckWriter {
     public static void write(Id alertId) {
-        update new Customer_Alert__c(
+        Database.update(new Customer_Alert__c(
             Id = alertId,
             Status__c = 'Active - Acknowledged',
             Acknowledged_At__c = Datetime.now()
-        );
+        ), AccessLevel.SYSTEM_MODE);
     }
 }
