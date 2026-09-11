@@ -56,7 +56,7 @@ AI 협업 도구(Agentforce Vibes · Claude Code)를 사용했으며 설계·의
 - `T5SetAssetContextService`
 - `T5SyncAssetTrendSummary`
 
-## LWC (48)
+## LWC (47)
 `otAgentSuggestedReply` · `otAssetPortal` · `otCaseSubtabOpener` · `otCoolingHome` · `otCoolingRca` · `otCoolingToday` · `otEquipDashboard` · `otEquipDetail` · `otEquipSidebar` · `otEquipStatusChip` · `otEquipUtilBar` · `otHallMiniview` · `otKpiCard` · `otLiveTelemetryStrip` · `otMsConvBanner` · `otMsSidebarCenter` · `otMsSidebarLeft` · `otMyAssets` · `otOpsKpiRow` · `otPinnedWidthOverride` · `otPortalHeader` · `otRecordBanner` · `otReportFault` · `otSalesContracts` · `otSalesCtaBanner` · `otSalesDashboard` · `otSalesHeader` · `otSalesHeroBanner` · `otSalesHomeGrid` · `otSalesKeyDeals` · `otSalesPipeline` · `otSalesQuarterly` · `otSalesRecentRecords` · `otSalesSidebar` · `otSalesTodayEvents` · `otSalesTodayTasks` · `otServiceRequestModal` · `otStatusBadge` · `otTrendAlertCard` · `t5GaugeSvg` · `t5HmiAssetDetail` · `t5HmiAssetHome` · `t5HmiAssetThumb` · `t5HmiScaleGauge` · `t5PortalSiteFooter` · `t5PortalSiteHeader` · `t5ServiceReplies`
 
 ## Aura (2)

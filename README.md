@@ -1,179 +1,157 @@
 # OT전자 냉각장비 CRM
 
-> AI 데이터센터용 냉각장비를 **제조 → 설치 → 인수 → 운영 → 재영업**하는 가상 기업 **OT전자**의
-> 리드부터 사후 운영까지를 잇는 Salesforce End-to-End CRM.
->
-> **6주 · 5인 팀 부트캠프 프로젝트** (AI CRM 2기). 저는 **설치·시운전·인수·보증 자동화를 담당**했고, 이후 **장비 조기경보·고객 포털·AI 상담을 잇는 운영 고도화**를 주도했습니다.
->
-> 이 저장소는 팀 저장소(`sf-team-1to10/ot-cooling-crm`, 비공개)에서 **제가 작성·설계한 컴포넌트만** 추출한 것입니다. (→ [CONTRIBUTIONS.md](./CONTRIBUTIONS.md)) 전체 프로젝트의 맥락 안에서 제 기여가 어디에 위치하는지 아래에 정리했습니다.
+> 냉각장비의 계약 조건과 설치·시운전 기록을 운영 단계까지 이어, 고객 문의가 들어왔을 때 **현재 상태와 과거 근거를 한 화면에서 확인하고 다음 조치를 결정**하도록 만든 Salesforce CRM입니다.
+
+**6주 · 5인 팀 프로젝트** | Salesforce · Service Cloud · Experience Cloud · Agentforce · Field Service<br>
+**담당** | 설치·시운전·인수·보증 자동화 단독 구현, 이후 조기경보·고객 포털·AI 상담을 잇는 운영 고도화 설계 및 구현
+
+이 저장소는 비공개 팀 저장소에서 제가 작성하거나 설계한 메타데이터만 추린 포트폴리오입니다. 파일별 기여 범위는 [CONTRIBUTIONS.md](./CONTRIBUTIONS.md)에 명시했습니다.
 
 ---
 
-## 1. 어떤 프로젝트인가
+## 프로젝트가 해결한 문제
 
-### 회사와 문제
+OT전자는 데이터센터 냉각장비를 납품하는 가상 제조사입니다. 장비 한 대의 정보가 영업 메일, 계약서, 설계 문서, 설치 기록, 서비스 이력에 나뉘어 있어 다음과 같은 문제가 생겼습니다.
 
-OT전자는 데이터센터에 들어가는 **냉각장비(CDU·냉각분배장치 등)를 만들어 파는 회사**입니다. 문제는 "장비를 팔고 나면 그 다음이 시스템에 안 보인다"는 것이었습니다.
+- 고객이 진행 상황을 물으면 영업 담당자가 생산·설계·설치팀에 다시 확인해야 했습니다.
+- 현장 담당자는 장애가 난 장비의 변경 위치와 과거 시운전 결과를 출동 전에 찾기 어려웠습니다.
+- 장비를 복구한 경험이 같은 모델의 예방점검이나 다음 영업 기회로 이어지지 않았습니다.
 
-| 단계 | As-Is 문제 |
-|---|---|
-| 영업 → 계약 | 리드·견적·제안이 이메일과 엑셀에 흩어져 유입 채널·전환율이 안 보임 |
-| 계약 → 설계 | 계약이 확정돼도 **"무슨 스펙으로 만들고 시운전할지"(설계 기준선)**가 시스템에 없어 매번 문서를 찾음 |
-| 설치 → 인수 | 잔여 작업(Punch)·재시험이 엑셀 관리 → 인수 판정이 담당자 감(感)에 의존 |
-| 인수 → 운영 | 장비 이상이 **사고가 터진 뒤에야** 접수됨. 사전 경보 없음 |
-| 운영 → 재영업 | 계약 만료·가동률 데이터가 영업으로 연결 안 됨 |
+이를 `Asset`을 중심으로 연결했습니다.
 
-### 목표
-
-리드 → 영업 → 계약 → **설계 기준선 → 생산·설치 → 시운전 → 인수(조건부→최종) → 보증 개시** → 운영(예방정비·장애복구) → 재영업(증설)의 전체 여정을 **하나의 데이터 체인**으로 잇는 것.
-
-### 시스템 아키텍처
-
-![시스템 아키텍처](./docs/diagrams/01_시스템_아키텍처.png)
-
-Salesforce Platform을 4계층(Business App / Data Layer / Automation·Decision / Process Hub)으로 구조화하고, `Asset`을 E2E 기준점으로 잡았습니다. 외부 시스템(PLM·ERP·BMS/DCCM)은 이번 범위에서 필드만 두고 실연동은 트리거 조건으로 미뤘습니다(§4-③). ERD는 [`docs/diagrams/`](./docs/diagrams) 참고.
-
-### 팀 구성 — "누가 어떤 객체를 소유하는가"로 트랙 분리
-
-업무(Use Case)가 아니라 **객체 소유권**으로 5개 트랙을 나눴습니다. 하나의 업무 흐름이 여러 객체를 가로지르기 때문에, UC로 나누면 여러 사람이 같은 객체를 건드리게 되기 때문입니다.
-
-| 트랙 | 소유 영역 |
-|---|---|
-| **T0 플랫폼** | 공통 객체 골격·권한(Permission Set)·CI 파이프라인·크로스트랙 Lookup |
-| **T1 영업** | Lead · Opportunity · Quote · 견적/제안/협상 |
-| **T2 변경관리** | 리비전·업그레이드·변경 요청 |
-| **T3 구축·인수 (담당)** | Technical Baseline · WorkOrder · WorkOrderLineItem · 시운전·인수·보증 |
-| **T4 운영·AI** | Case · Problem · 예방정비 · Agentforce · 출동 브리핑 |
-| **T5 고도화 (주도)** | 가상 IoT · 조기경보 · 통합 Service Agent · 고객 포털 · Slack 협업 · FSM |
-
-## 2. 대표 데모 시나리오 (전체 여정)
-
-`CDU-A-07` 장비 한 대가 시나리오 전체를 관통합니다.
-
-```
-계약 체결 → Technical Baseline(설계 기준선) 스냅샷 → ERP 발주        [T3]
-  → 설치 WorkOrder → 자산별 라인아이템 자동 생성                     [T3]
-  → 시운전 WorkOrder → 측정 → 합격/불합격 자동 판정 → 재시험 체인     [T3]
-  → Punch(잔여작업) 집계 → 핸드오프 게이트(D1→D2→D6)                [T3]
-  → 조건부인수 시점에 보증 기산 + 보증·서비스계약 자동 생성           [T3]
-  ─────────────────────  운영 단계  ─────────────────────
-  → 가상 IoT 센서값 수신 → 추세 이상 감지 → Trend 조기경보           [T5]
-  → 고객이 포털에서 게이지·이력 확인 → 상담 진입(MIAW 실시간 채팅)     [T5]
-  → 통합 Service Agent 1차 응대(자산 컨텍스트 + Knowledge) → 서비스팀 이관 [T5]
-  → Case 생성 → Customer 360(계약·제품·문제 이력) → 출동 브리핑        [T4/T5]
-  → 복합 이슈 시 Slack Swarm 채널 자동 개설·전문가 초대·요약 게시      [T5]
-  → Field Service 모바일 출동 → 원인 분석(RCA) → 현장 조치            [T5]
-  → Knowledge Article 자동 생성 순환 + 동종 장비 수평 예방            [T5]
-  → 계약 만료·가동률 기반 증설 제안 → 재영업                          [T5]
+```text
+계약 확정
+  → 설계 기준선 스냅샷
+  → 설치·시운전 작업 자동 생성
+  → 측정값 판정·재시험·인수
+  → 보증 자동 개시
+  → 장비 이상 감지·고객 상담
+  → 출동·복구·RCA
+  → 동종 장비 예방조치·재영업
 ```
 
-## 3. 이 여정에서 내가 담당한 부분
+![OT전자 시스템 아키텍처](./docs/diagrams/01_시스템_아키텍처.png)
 
+외부 PLM·ERP·BMS는 원본 시스템으로 남기고, Salesforce에는 담당자가 판단하고 협업하는 데 필요한 상태·식별자·이력만 연결하도록 경계를 정했습니다.
+
+## 대표 사용자 여정
+
+아래 화면은 실제 org의 객체와 데이터 구조를 바탕으로 만든 **인터랙션 프로토타입**입니다. 여러 레코드 화면을 오가며 설명해야 했던 데모를 하나의 장비 `CDU-A-07` 여정으로 재구성했습니다. 실제 구현 화면은 다음 절에서 별도로 확인할 수 있습니다.
+
+### 1. 고객은 이상을 발견한 화면에서 바로 상담을 시작합니다
+
+![고객 포털 이상 감지](./screenshots/09_시나리오_고객포털_이상감지.png)
+
+고객 포털이 장비별 유량, 기준선 대비 변화, 보증과 최근 정비 이력을 함께 보여줍니다. 상담을 시작하면 선택한 자산의 문맥이 대화에 전달되어 고객이 장비 정보와 증상을 처음부터 다시 설명하지 않아도 됩니다.
+
+### 2. 서비스 담당자는 출동 여부와 우선 점검 위치를 근거와 함께 판단합니다
+
+![출동 브리핑과 판단 근거](./screenshots/10_시나리오_출동브리핑_판단근거.png)
+
+유량 하락 폭, 동일 위치의 과거 실패, SLA 잔여시간과 자산 중요도는 Flow와 Rule이 계산합니다. Agent는 그 결과를 설명하고 점검 후보를 제안하며, 최종 Priority와 출동은 담당자가 승인합니다.
+
+### 3. 4년 전 변경과 시운전 기록이 현재 장애의 근거가 됩니다
+
+![변경 요청부터 시운전까지의 원기록](./screenshots/11_시나리오_변경_시운전_원기록.png)
+
+고객 변경요청, 적용 Revision, 변경 위치, 최초 불합격값과 재시험 합격값을 같은 자산에 연결했습니다. 최종 합격값만 남기지 않았기 때문에 현재 장애에서 `Rev.B · F-07 · 68 → 112`라는 구체적인 점검 근거를 찾을 수 있습니다.
+
+### 4. 현장 담당자는 과거 기록과 점검 순서를 Work Order에서 확인합니다
+
+![현장 작업 모바일 화면](./screenshots/12_시나리오_현장작업_모바일.png)
+
+적용 Revision과 변경 위치, 과거 측정값, 점검 순서가 Field Service 작업에 함께 전달됩니다. 현장 담당자가 과거 담당자의 기억이나 별도 문서에 의존하지 않도록 만들었습니다.
+
+### 5. 복구 결과는 예방조치라는 다음 업무로 이어집니다
+
+![RCA와 예방조치 범위](./screenshots/13_시나리오_RCA_예방조치.png)
+
+직접 원인과 조직 차원의 원인을 구분하고, 담당자가 승인한 범위에 따라 시정조치 1건과 동종 장비 예방확인 11건을 만듭니다. 분석 결과가 보고서에 머무르지 않고 담당자와 기한이 있는 후속 작업이 되도록 설계했습니다.
+
+## 실제 Salesforce org 화면
+
+| 서비스 운영 홈 | 고객 포털 장비 상세 |
+|---|---|
+| ![서비스 운영 홈](./screenshots/01_운영개요_대시보드.png) | ![고객 포털 장비 상세](./screenshots/04_장비상세_게이지_이력.png) |
+| 전체 장비, 활성 알림, 유량 추세를 한 화면에서 확인 | 고객 계정에 속한 장비의 상태·게이지·정비 이력을 조회 |
+
+| Agent 상담과 보증·SLA 판정 | Case 단계와 Work Order 연동 |
+|---|---|
+| ![Agent 상담과 보증 SLA](./screenshots/07_상담사콘솔_Agent대화_보증SLA판정.png) | ![Case와 Work Order 연동](./screenshots/08_상담사콘솔_대화_작업주문연동.png) |
+| 자산·계약 문맥을 확인한 Agent 대화를 상담사가 이어받음 | 접수부터 RCA까지의 상태와 현장 작업을 같은 콘솔에서 추적 |
+
+추가 화면은 [`screenshots/`](./screenshots)에서 볼 수 있습니다.
+
+## 내가 구현한 핵심
+
+### 설치·시운전·인수·보증
+
+| 문제 | 구현 | 사용자에게 보이는 변화 |
+|---|---|---|
+| 계약 이후 적용 사양이 문서에만 남음 | 계약 활성화 시 `Technical_Baseline__c` Rev.A 스냅샷 생성 | 확정 사양과 이후 변경 Revision을 자산 이력에서 추적 |
+| 설치와 시운전의 작업 단위가 다름 | 설치는 자산별, 시운전은 측정항목별 Work Order Line Item 자동 생성 | 담당자가 작업표를 수동으로 다시 만들지 않음 |
+| 측정 결과와 재시험 이력이 끊김 | 허용범위 자동 적재 → 합격/불합격 판정 → 불합격 시 재시험 체인 생성 | 최초 실패값과 조치 후 결과를 함께 확인 |
+| 잔여 작업이 있는데 다음 단계로 넘어감 | Punch 상시 집계, 증빙 검사, 단계별 Handoff Gate | 완료조건을 충족해야 인수 단계로 이동 |
+| 인수일을 다시 저장할 때 보증일이 달라질 수 있음 | 조건부인수 시 보증 기산일을 한 번만 기록 | 보증 시작일의 불변성 보장 |
+
+이 구간은 Record-Triggered Flow 17개와 Validation Rule로 구현했습니다. 대표 흐름은 `Technical_Baseline_Rev_A`, `WOLI_Judgement_AutoSet`, `WOLI_Retest_Create`, `Asset_Warranty_On_Acceptance`입니다.
+
+### 운영 고도화
+
+| 기능 | 구현 방식 |
+|---|---|
+| 장비 조기경보 | `IoT_Reading__e` Platform Event → WOLI 기록 → 추세 판정 → Asset 요약 동기화 |
+| 고객 포털 | Experience Cloud + 계정 범위 조회 Apex + 장비 홈·상세·게이지 LWC |
+| 통합 Service Agent | 고객/내부 Topic 분리, 자산·계약·Knowledge·Case 처리를 위한 Invocable Apex Action 6종 |
+| 상담사 이어받기 | MIAW 세션과 Case를 같은 콘솔에 고정하고 자산 문맥을 전달 |
+| 현장·협업 연결 | Work Order, Field Service, Slack Swarm을 Case 흐름에 연결 |
+
+## 구현 중 내린 주요 결정
+
+### 보증 시작일은 조건부인수 시점에 한 번만 기록
+
+인수는 조건부인수와 최종인수로 나뉩니다. 최종인수 때마다 보증 시작일을 다시 쓰면 잔여 작업이 늦어질수록 회사의 보증 부담도 임의로 바뀝니다. 최초 조건부인수 시점만 기록하고 이후 저장에서는 바꾸지 않는 Flow 조건을 두었습니다.
+
+### 포털이 조회할 수 없는 원본은 Asset 요약으로 제공
+
+이 org의 Customer Community 라이선스에서는 `WorkOrderLineItem`에 객체 권한을 부여할 수 없었습니다. 권한을 넓히는 우회 대신, 원본 변경 시 필요한 게이지와 최신 추세만 `Asset` 요약 필드에 동기화했습니다. 포털 사용자는 자신의 계정에 속한 Asset만 `WITH USER_MODE`로 조회합니다.
+
+### Agent의 제안과 담당자의 결정을 분리
+
+Priority, 점검 위치, 예방 범위는 Agent가 근거와 후보를 준비하지만 담당자가 승인합니다. Case의 현장 완료 알림만으로 자동 종결하지 않고, 고객 복구 확인과 RCA가 끝나야 다음 단계로 이동하도록 했습니다.
+
+### 실패값을 정상값으로 덮어쓰지 않음
+
+시운전 불합격과 재시험 합격을 별도 Line Item 체인으로 남겼습니다. 과거에 해결된 실패가 몇 년 뒤 장애의 위치를 좁히는 근거가 될 수 있기 때문입니다.
+
+## 구조와 규모
+
+```text
+force-app/main/default/
+├── flows/                  # 설치·인수·운영 자동화 23개
+├── classes/                # Apex 19개 + 테스트 클래스 8개
+├── lwc/                    # 고객 포털·운영 홈·상담 콘솔 UI 47개
+├── aiAuthoringBundles/     # OT Service Agent
+├── genAiPromptTemplates/   # 상담 답변·Case 종결 요약
+├── digitalExperiences/     # Experience Cloud 사이트
+└── objects/                # 담당 범위의 커스텀 필드·검증 규칙
 ```
-리드─영업─계약─┃━ 설계 기준선 ━ 생산·설치 ━ 시운전 ━ 인수 ━ 보증 ┃━ 운영 ━ 재영업 ─
-  (T1)  (T1) (T1)┃◀────────────── T3 구축·인수 (단독) ──────────────▶┃◀── T5 고도화 (주도) ──▶
-```
 
-- **T3 (단독)** — 계약 확정 이후 "설계 기준선 → 시운전/인수 → 보증 개시"의 **데이터 체인과 결정적 자동화** 전부. Flow 23개가 이 구간의 뼈대입니다.
-- **T5 (주도)** — 발표 범위 밖에서 운영 단계의 "가상 IoT → 조기경보 → 협업 → AI 상담 → 현장 → 재영업" 통합 루프를 ADR로 설계하고, 이후 3~4인 팀 분업(트랙 A~E 백로그·주말 분업표 작성)으로 확장했습니다.
-  → **아래 T5 표는 분업 이후 제가 직접 구현·커밋한 컴포넌트**입니다 (`git author` 기준 추출 — 다른 트랙 담당자가 만든 것은 이 저장소에 없음). Apex 19 · LWC 48.
+- 시스템·데이터 구조: [`docs/T5_시스템아키텍처.md`](./docs/T5_시스템아키텍처.md), [`docs/diagrams/`](./docs/diagrams)
+- 통합 Service Agent: [`docs/T5_통합_Service_Agent_구조.md`](./docs/T5_통합_Service_Agent_구조.md)
+- 실시간 알림: [`docs/T5_실시간알림_구조.md`](./docs/T5_실시간알림_구조.md)
+- 설계 기록: [`docs/ADR-T5-00-integrated-loop.md`](./docs/ADR-T5-00-integrated-loop.md)
+- 기능별 명세: [`docs/specs/`](./docs/specs)
 
-아래 ERD가 제 담당 구간입니다 — Technical Baseline · WorkOrder · WOLI(`Trend_Flag__c` / `Drift_From_Baseline__c`) · IoT_Reading_Event · Customer_Alert · Case · Entitlement (직접 설계):
+## 검증과 범위
 
-![설치·인수·운영·재영업 상세 ERD](./docs/diagrams/04_설치인수운영_상세_ERD.png)
+- Apex 테스트 클래스 8개, 테스트 메서드 48개로 자산 조회 범위, 조기경보 요약, Agent Action, 포털 알림 확인 등을 검증했습니다. (2026-09-11 연결 org 기준 48/48 통과)
+- 화면의 회사명·고객명·수치와 성과 시간은 프로젝트 데모용 가상 데이터입니다.
+- 팀 전체 시나리오 중 RCA 워크벤치·Customer 360·출동 브리핑의 일부는 다른 팀원 구현입니다. 이 저장소에는 제 구현 파일만 포함했습니다.
+- 다른 트랙이 만든 객체와 필드를 참조하므로 이 저장소만으로 단독 배포하는 패키지는 아닙니다.
 
-[전체 여정 Object ERD →](./docs/diagrams/03_전체여정_Object_ERD.svg)
+## 기술 스택
 
-### T3 — 구축·인수 트랙 (단독)
-
-| 구간 | 만든 것 |
-|---|---|
-| 기준선 | `Technical_Baseline__c` 필드 설계 + `Technical_Baseline_Rev_A` — **Contract가 `Activated`(법적 구속력 발생)되는 시점의 스냅샷**으로 Rev.A 생성 |
-| ERP 연계 | `Baseline_Approve_ERP_Order` — 승인 시 발주 상태 전이 (Fast Field Update) |
-| 작업 자동화 | `WO_Install_LineItem_AutoCreate`(설치: 자산 1대당 1줄) / `WO_Commission_LineItem_AutoCreate`(시운전: 측정항목 1건당 1줄) — 같은 WorkOrder라도 **업무 성격에 따라 라인아이템 생성 축이 다름** |
-| 시험·판정 | `WOLI_Baseline_Spec_AutoLoad`(적용 리비전 → 허용범위 자동 적재) · `WOLI_Judgement_AutoSet`(측정값 → 합격/불합격) · `WOLI_Retest_Create`(불합격 → 재시험 체인) |
-| Punch 관리 | `WOLI_*_Open_Punch_Recalc` 상시 집계 + `Punch_Overdue_Task_Daily` 기한 초과 자동 노출 + Validation Rule(검증완료 시 검증자 필수) |
-| 핸드오프 게이트 | `TB_D1_D2_Handoff` · `WorkOrder_Evidence_Check` · `WorkOrder_D6_Task_On_Completion` — 완료조건 미충족 시 다음 단계 진입 차단 |
-| 보증 자동화 | `Asset_Warranty_On_Acceptance` — **조건부인수 시점에 보증 기산일을 1회 기록, 최종인수로 재저장돼도 재기록 안 함** (§4-①) |
-
-### T5 — AI 운영 고도화 (주도)
-
-| 축 | 만든 것 |
-|---|---|
-| 가상 IoT · 조기경보 | `IoT_Reading__e` Platform Event → `T5_IoT_Reading_Subscribe` → WOLI 기록 → `Trend_Flag__c` 추세 판정 → `T5_Sync_Asset_Trend_Summary`. `OtTrendAlertCardController` + 게이지 위젯 |
-| 고객 포털 (Experience Cloud) | `T5HmiAssetHomeController` / `T5HmiAssetDetailController` + `otEquip*` / `otMyAssets` / `otAssetPortal` — 고객이 자기 장비 상태·이력·게이지 확인 후 상담 진입 |
-| 통합 Service Agent (Agentforce) | `bots/OT_Service_Agent` + `aiAuthoringBundles` — 고객·내부 상담을 **하나의 에이전트 + Topic 분리**로 처리. `T5Agent*Action` 6종(자산 컨텍스트 / Case 인테이크 / 계약 컨텍스트 / Knowledge 검색 / 답변 추천 / Case 종결 요약) + `genAiPromptTemplates` 2종 |
-| AI 자동 응답 추천 | `T5AgentReplySuggestionAction` + `Agent_Reply_Suggestion` 프롬프트 템플릿 + `otAgentSuggestedReply` / `t5ServiceReplies` — 상담사가 답변 초안을 한 번 더 검증해 발송 |
-| MIAW 실시간 채팅 | `messagingChannels/OT_Service_Chat` + `EmbeddedServiceConfig` + `Route_Inbound_to_Agent` / `Route_to_Messaging_Queue` Flow + `Messaging_Session_Pinned/Record_Page` FlexiPage + `otMsSidebarLeft`·`otMsSidebarCenter`·`otMsConvBanner`·`otCaseSubtabOpener` — MessagingSession 좌측 고정 + Case 서브탭 자동 오픈, 1차 Agent → 2차 상담사 **같은 대화 이어받기** |
-| Slack 협업 · FSM | 담당자 확정 → Slack Swarm 채널 자동 생성·초대·요약, FSM 모바일 배정 연동 + SA/WO 상태 동기화 |
-| 운영 홈 | `OTOpsHomeController` + `otCooling*` / `otEquip*` / `OtTrendAlertCard` + 게이지 LWC(`t5GaugeSvg`·`t5HmiScaleGauge`) — 운영 KPI·장비 상태·유량 추세·에너지 사용량 |
-| 영업(Opportunity) 홈 | `OtSalesDashboardController` / `OtSalesSidebarController` + `dashboards/OT_Sales_Dashboard` + `reports/OT_Sales/` 4종(Pipeline_By_Stage·Key_Deals·Quarterly) + `otSales*` LWC 15종 — 분기 실적·파이프라인·서비스계약 만료 관리 |
-
-> §2 데모 시나리오의 **원인 분석(RCA) 워크벤치·출동 브리핑·Customer 360**은 T4 트랙(다른 팀원) 작업입니다. 이 저장소에는 포함되지 않습니다.
-
-## 4. 핵심 의사결정
-
-"무엇을 만들었나"보다 **"왜 이 선택을 했나"**. 가장 자신 있는 부분입니다.
-
-**① 보증 기산일 불변성**
-인수는 조건부인수(사소한 잔여 작업이 남아도 고객이 일단 받아들이는 시점) → 최종인수 2단계입니다. "보증 시작일 = 최종인수일"로 잡으면, 잔여 작업이 늦어질수록 보증 시작일도 밀려 **회사가 자기 지연 때문에 보증 부담을 스스로 키우게 됩니다.** 그래서 보증 기산일은 조건부인수 시점에 딱 한 번 기록되고, 이후 레코드가 재저장돼도 재기록되지 않도록 설계했습니다 — 이 불변성 자체가 완료조건의 핵심.
-
-**② Technical Baseline = 계약 확정 시점의 스냅샷**
-아직 협상 중일 수 있는 `Quote`·`Customer_Commitment__c` 기준으로 기준선을 만들면 안 됩니다. **`Contract.Status`가 `Activated`로 바뀌는 순간 = 법적 구속력이 생기는 확정 시점**이고, 기준선은 정확히 이 시점의 스냅샷이어야 합니다.
-
-**③ Clicks-before-Code를 "미리 계획"이 아니라 "트리거 조건"으로 관리**
-백로그의 모든 요구사항이 Flow·Validation Rule로 커버되고, 진짜 코드가 필요한 이유(복잡한 대량 처리, 동기 외부 콜아웃, 표준 화면 불가 UI)가 없다면 커스터마이징 단계를 미리 넣지 않았습니다. 대신 "이 조건이 오면 그때 논의"라는 트리거(예: 실제 ERP/BMS 연동 승인)만 정의. 발표 트랙에서 Agentforce·포털(T3-22~25)을 보류한 것도 "자동화 기반이 갖춰진 뒤에야 그 위 레이어가 의미 있다"는 이 원칙의 적용입니다.
-
-**④ "예방"에는 두 축이 있다**
-팀은 "예방 기능이 없다"고 봤지만, 정확히는 **수평적 예방**(사고 후 동종 장비 확산 방지 — 이미 있음)과 **수직적 조기경보**(사고 전, 추세만으로 트리거 — 없음)로 나뉩니다. T5의 IoT → Trend 루프가 후자를 채우는 것으로 범위를 정확히 정의했습니다.
-
-**⑤ org 실측은 Tooling API 우선**
-진단 계정에 FLS가 없으면 `sf sobject describe`·일반 SOQL이 "필드 없음"이라는 **거짓 음성**을 냅니다(실제로는 배포·Active인데). Tooling API(`CustomField`, `FieldPermissions`, `FlowDefinitionView`)는 FLS와 무관하게 메타데이터 존재를 보여줘 이걸 기준으로 삼았습니다.
-
-## 5. 팀 협업 구조
-
-- **트랙 = 객체 소유권** (§1). 하나의 UC가 여러 객체를 가로지르므로, UC 단위로 나누면 충돌이 난다는 판단.
-- **GitHub 경유 + 개인 Sandbox 분리** — Salesforce는 클릭이 즉시 org에 반영되는 시스템이라 여러 명이 같은 org를 동시에 손대면 덮어씀. 그래서 메타데이터를 XML로 git 관리하고, 각자 개인 Sandbox에서 개발.
-- **git worktree로 5개 병렬 트랙** — 하나의 저장소에서 트랙별 브랜치를 별도 폴더로 체크아웃해, 파일 겹침·merge 대기를 관리.
-- **공유 메타데이터의 함정** — `Permission Set`처럼 여러 트랙이 한 파일을 공유하면, 필드 하나만 추가해도 CI가 파일 전체(다른 트랙 몫 포함)를 검증 대상으로 끌어와 실패할 수 있음. "내가 고친 부분만 영향받는다"는 직관이 안 통한다는 걸 사고로 배움.
-
-## 6. 기술 스택
-
-Record-Triggered Flow · Screen Flow · Fast Field Update · Validation Rule · Approval Process ·
-Apex (Invocable Action / Controller / Trigger Handler) · Lightning Web Components ·
-Platform Event · Custom Metadata Type · Agentforce (Topic / Action) · Experience Cloud ·
-Service Cloud for Slack (Case Swarming) · Field Service · SFDX · GitHub Actions CI
-
-**협업 도구**: Agentforce Vibes · Claude Code — AI 페어링으로 트랙 단독 구축. 설계·의사결정·검증은 직접.
-
-**검증**: Apex 테스트 클래스 8개를 포함합니다.
-
-## 7. 문서
-
-- [T3 시스템이해노트](./docs/T3_시스템이해노트.md) — 플랫폼 동작 원리·배포 구조·트랙 협업 설계
-- [T3 학습정리](./docs/T3_학습정리.md) — Flow/도메인 노하우
-- [T5 시스템 아키텍처 총정리](./docs/T5_시스템아키텍처.md) · [통합 Service Agent 구조](./docs/T5_통합_Service_Agent_구조.md) · [실시간 알림 구조](./docs/T5_실시간알림_구조.md)
-- [ADR-T5-00 통합 루프 MVP](./docs/ADR-T5-00-integrated-loop.md) · [T5 A~E 스펙](./docs/specs)
-- [다이어그램 (시스템 아키텍처 · ERD, 직접 설계)](./docs/diagrams)
-
-## 8. 화면
-
-**상담사 콘솔 (MIAW) — Agent 대화 + AI 추천 응답**
-
-| Agent 이관 + AI 추천 응답 카드 | Agent 컨텍스트 대화 + 보증·SLA 판정 |
-|---|---|
-| ![AI 추천 응답](./screenshots/03_상담사콘솔_MIAW_에이전트이관.png) | ![Agent 대화](./screenshots/07_상담사콘솔_Agent대화_보증SLA판정.png) |
-
-**운영 · 포털**
-
-| 운영 개요 대시보드 | 장비 상세 (게이지·이력) — 고객 포털 |
-|---|---|
-| ![운영 개요](./screenshots/01_운영개요_대시보드.png) | ![장비 상세](./screenshots/04_장비상세_게이지_이력.png) |
-
-전체 6장: [`screenshots/`](./screenshots) — 운영 대시보드·영업 홈·작업주문 연동 포함
-
-## 9. 이 저장소에 대해
-
-- **단독 배포 대상이 아닙니다.** 팀 저장소에서 제 작업만 추출했기 때문에, 다른 트랙이 만든 오브젝트·필드를 참조하는 부분이 있습니다. 코드·설계를 보여주기 위한 것입니다.
-- 표준 객체(`Case`, `WorkOrder` 등) 폴더에는 **제가 추가한 커스텀 필드만** 포함했습니다.
-- 팀원 이름·내부 논의 문서는 제외/치환했습니다.
+Salesforce Platform · Service Cloud · Experience Cloud · Field Service · Agentforce · MIAW<br>
+Flow · Apex · LWC · Platform Event · Custom Metadata Type · Prompt Template<br>
+SFDX · GitHub Actions · Slack
